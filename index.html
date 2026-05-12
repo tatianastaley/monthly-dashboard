@@ -46,12 +46,7 @@
     align-items: flex-end;
     padding-bottom: 28px;
     border-bottom: 1px solid var(--line-strong);
-    margin-bottom: 48px;
-  }
-  .brand {
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
+    margin-bottom: 36px;
   }
   .brand-mark {
     font-family: 'Fraunces', serif;
@@ -69,6 +64,7 @@
     letter-spacing: -0.02em;
     color: var(--ink);
     font-variation-settings: 'opsz' 144;
+    margin-top: 4px;
   }
   .brand-sub {
     font-family: 'Fraunces', serif;
@@ -90,7 +86,7 @@
     color: var(--ink);
     margin-bottom: 4px;
   }
-  .header-meta .tag {
+  .tag {
     display: inline-block;
     padding: 3px 10px;
     background: var(--accent);
@@ -102,205 +98,57 @@
     border-radius: 2px;
   }
 
-  /* SECTION HEADERS */
-  .section { margin-bottom: 56px; }
-  .section-label {
+  /* TABS */
+  .tabs-wrap {
     display: flex;
     align-items: baseline;
-    gap: 16px;
-    margin-bottom: 24px;
-  }
-  .section-num {
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 11px;
-    color: var(--ink-muted);
-    letter-spacing: 0.1em;
-  }
-  .section-title {
-    font-family: 'Fraunces', serif;
-    font-weight: 400;
-    font-size: 28px;
-    letter-spacing: -0.01em;
-    color: var(--ink);
-  }
-  .section-rule {
-    flex: 1;
-    height: 1px;
-    background: var(--line);
-  }
-  .section-note {
-    font-family: 'Fraunces', serif;
-    font-style: italic;
-    font-size: 14px;
-    color: var(--ink-muted);
-  }
-
-  /* KPI GRID */
-  .kpi-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 1px;
-    background: var(--line);
-    border: 1px solid var(--line-strong);
-  }
-  .kpi {
-    background: var(--bg-card);
-    padding: 28px 24px 24px;
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
-    position: relative;
-  }
-  .kpi-label {
-    font-size: 11px;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    color: var(--ink-muted);
-    font-weight: 500;
-  }
-  .kpi-value {
-    font-family: 'Fraunces', serif;
-    font-weight: 400;
-    font-size: 38px;
-    line-height: 1.05;
-    color: var(--ink);
-    letter-spacing: -0.02em;
-    font-variation-settings: 'opsz' 144;
-  }
-  .kpi-value.small { font-size: 32px; }
-  .kpi-sub {
-    font-size: 12px;
-    color: var(--ink-soft);
-    margin-top: 4px;
-    display: flex;
-    align-items: center;
-    gap: 6px;
-  }
-  .delta {
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 12px;
-    font-weight: 500;
-    padding: 2px 7px;
-    border-radius: 2px;
-  }
-  .delta.pos { color: var(--pos); background: rgba(45, 106, 79, 0.08); }
-  .delta.neg { color: var(--neg); background: rgba(155, 44, 44, 0.08); }
-  .delta.neutral { color: var(--ink-muted); background: var(--highlight); }
-
-  /* CHART CARDS */
-  .grid-2 {
-    display: grid;
-    grid-template-columns: 1.4fr 1fr;
-    gap: 32px;
-  }
-  .grid-3 {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 24px;
-  }
-  .card {
-    background: var(--bg-card);
-    border: 1px solid var(--line-strong);
-    padding: 28px 28px 24px;
-  }
-  .card-header {
-    margin-bottom: 20px;
-  }
-  .card-eyebrow {
-    font-size: 10px;
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-    color: var(--ink-muted);
-    margin-bottom: 6px;
-    font-weight: 500;
-  }
-  .card-title {
-    font-family: 'Fraunces', serif;
-    font-weight: 400;
-    font-size: 22px;
-    letter-spacing: -0.01em;
-    color: var(--ink);
-  }
-  .card-sub {
-    font-size: 12px;
-    color: var(--ink-soft);
-    margin-top: 4px;
-    font-style: italic;
-    font-family: 'Fraunces', serif;
-  }
-  .chart-box {
-    position: relative;
-    height: 280px;
-  }
-  .chart-box.tall { height: 320px; }
-
-  /* TABLE */
-  table {
-    width: 100%;
-    border-collapse: collapse;
-    font-size: 13px;
-  }
-  thead th {
-    text-align: left;
-    padding: 12px 14px;
-    font-size: 10px;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    color: var(--ink-muted);
-    font-weight: 600;
-    border-bottom: 1.5px solid var(--ink);
-  }
-  thead th.num { text-align: right; }
-  tbody td {
-    padding: 13px 14px;
-    border-bottom: 1px solid var(--line);
-    color: var(--ink-soft);
-  }
-  tbody td:first-child {
-    color: var(--ink);
-    font-weight: 500;
-  }
-  tbody td.num {
-    text-align: right;
-    font-family: 'JetBrains Mono', monospace;
-    font-variant-numeric: tabular-nums;
-  }
-  .pos { color: var(--pos) !important; }
-  .neg { color: var(--neg) !important; }
-  .seg-tag {
-    font-size: 11px;
-    color: var(--ink-muted);
-  }
-  .seg-name {
-    font-family: 'Fraunces', serif !important;
-    font-size: 16px !important;
-    font-weight: 400 !important;
-  }
-
-  tfoot td {
-    padding: 14px;
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 12px;
-    font-weight: 600;
-    border-top: 1.5px solid var(--ink);
-    color: var(--ink);
-  }
-  tfoot td.num { text-align: right; }
-
-  /* FOOTER */
-  .footer {
-    margin-top: 64px;
-    padding-top: 24px;
-    border-top: 1px solid var(--line-strong);
-    display: flex;
     justify-content: space-between;
+    margin-bottom: 32px;
+    padding-bottom: 0;
+    border-bottom: 1px solid var(--line-strong);
+  }
+  .tabs {
+    display: flex;
+    gap: 2px;
+  }
+  .tab {
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid transparent;
+    font-family: 'Fraunces', serif;
+    font-weight: 400;
+    font-size: 18px;
+    color: var(--ink-muted);
+    padding: 14px 24px;
+    cursor: pointer;
+    letter-spacing: -0.005em;
+    transition: color 0.2s, border-color 0.2s;
+    margin-bottom: -1px;
+  }
+  .tab:hover { color: var(--ink-soft); }
+  .tab.active {
+    color: var(--ink);
+    border-bottom-color: var(--accent);
+  }
+  .tab .tab-sub {
+    display: block;
+    font-family: 'Inter Tight', sans-serif;
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--ink-muted);
+    font-weight: 500;
+    margin-top: 2px;
+  }
+  .tab.active .tab-sub { color: var(--ink-soft); }
+  .tab-meta {
     font-size: 11px;
     color: var(--ink-muted);
     letter-spacing: 0.05em;
+    padding-bottom: 16px;
   }
-  .footer .mono { font-family: 'JetBrains Mono', monospace; }
 
-  /* HIGHLIGHT BOX */
+  /* COMMENTARY */
   .commentary {
     background: var(--bg-dark);
     color: var(--bg);
@@ -330,7 +178,6 @@
     font-weight: 300;
     font-size: 22px;
     line-height: 1.45;
-    letter-spacing: -0.005em;
     color: #f5f2ec;
     max-width: 900px;
   }
@@ -346,19 +193,231 @@
     padding-top: 24px;
     border-top: 1px solid rgba(245, 242, 236, 0.15);
   }
-  .cs-item .cs-num {
+  .cs-num {
     font-family: 'Fraunces', serif;
     font-size: 32px;
     color: var(--bg);
     line-height: 1;
     margin-bottom: 6px;
   }
-  .cs-item .cs-lbl {
+  .cs-lbl {
     font-size: 11px;
     letter-spacing: 0.12em;
     text-transform: uppercase;
     color: rgba(245, 242, 236, 0.6);
   }
+
+  /* SECTIONS */
+  .section { margin-bottom: 56px; }
+  .section-label {
+    display: flex;
+    align-items: baseline;
+    gap: 16px;
+    margin-bottom: 24px;
+  }
+  .section-num {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    color: var(--ink-muted);
+    letter-spacing: 0.1em;
+  }
+  .section-title {
+    font-family: 'Fraunces', serif;
+    font-weight: 400;
+    font-size: 28px;
+    letter-spacing: -0.01em;
+  }
+  .section-rule { flex: 1; height: 1px; background: var(--line); }
+  .section-note {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-size: 14px;
+    color: var(--ink-muted);
+  }
+
+  /* KPI GRID */
+  .kpi-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1px;
+    background: var(--line);
+    border: 1px solid var(--line-strong);
+  }
+  .kpi {
+    background: var(--bg-card);
+    padding: 28px 24px 24px;
+  }
+  .kpi-label {
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--ink-muted);
+    font-weight: 500;
+  }
+  .kpi-value {
+    font-family: 'Fraunces', serif;
+    font-weight: 400;
+    font-size: 38px;
+    line-height: 1.05;
+    color: var(--ink);
+    letter-spacing: -0.02em;
+    font-variation-settings: 'opsz' 144;
+    margin-top: 6px;
+  }
+  .kpi-value.small { font-size: 32px; }
+  .kpi-sub {
+    font-size: 12px;
+    color: var(--ink-soft);
+    margin-top: 6px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    flex-wrap: wrap;
+  }
+  .delta {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    font-weight: 500;
+    padding: 2px 7px;
+    border-radius: 2px;
+  }
+  .delta.pos { color: var(--pos); background: rgba(45, 106, 79, 0.08); }
+  .delta.neg { color: var(--neg); background: rgba(155, 44, 44, 0.08); }
+  .delta.neutral { color: var(--ink-muted); background: var(--highlight); }
+
+  /* CARDS */
+  .grid-2 {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    gap: 32px;
+  }
+  .grid-2.equal { grid-template-columns: 1fr 1fr; }
+  .card {
+    background: var(--bg-card);
+    border: 1px solid var(--line-strong);
+    padding: 28px 28px 24px;
+  }
+  .card-eyebrow {
+    font-size: 10px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--ink-muted);
+    margin-bottom: 6px;
+    font-weight: 500;
+  }
+  .card-title {
+    font-family: 'Fraunces', serif;
+    font-weight: 400;
+    font-size: 22px;
+    letter-spacing: -0.01em;
+  }
+  .card-sub {
+    font-size: 12px;
+    color: var(--ink-soft);
+    margin-top: 4px;
+    font-style: italic;
+    font-family: 'Fraunces', serif;
+  }
+  .card-header { margin-bottom: 20px; }
+  .chart-box { position: relative; height: 280px; }
+  .chart-box.tall { height: 320px; }
+
+  /* TABLE */
+  table { width: 100%; border-collapse: collapse; font-size: 13px; }
+  thead th {
+    text-align: left;
+    padding: 12px 14px;
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--ink-muted);
+    font-weight: 600;
+    border-bottom: 1.5px solid var(--ink);
+  }
+  thead th.num { text-align: right; }
+  tbody td {
+    padding: 13px 14px;
+    border-bottom: 1px solid var(--line);
+    color: var(--ink-soft);
+  }
+  tbody td:first-child { color: var(--ink); font-weight: 500; }
+  tbody td.num {
+    text-align: right;
+    font-family: 'JetBrains Mono', monospace;
+    font-variant-numeric: tabular-nums;
+  }
+  .pos { color: var(--pos) !important; }
+  .neg { color: var(--neg) !important; }
+  .seg-tag { font-size: 11px; color: var(--ink-muted); }
+  .seg-name {
+    font-family: 'Fraunces', serif !important;
+    font-size: 16px !important;
+    font-weight: 400 !important;
+  }
+  tr.channel-group-start td {
+    border-top: 2px solid var(--line-strong);
+    padding-top: 16px;
+  }
+
+  /* Location detail table: channel header rows + subordinate location rows */
+  .location-table tbody tr.channel-header-row td {
+    background: var(--highlight);
+    border-top: 2px solid var(--ink);
+    border-bottom: 1px solid var(--line-strong);
+    padding-top: 14px;
+    padding-bottom: 14px;
+  }
+  .location-table tbody tr.channel-header-row:first-child td {
+    border-top: none;
+  }
+  .location-table tbody tr.channel-header-row td.channel-header-name {
+    font-family: 'Fraunces', serif;
+    font-size: 17px;
+    font-weight: 500;
+    color: var(--ink);
+    letter-spacing: -0.01em;
+  }
+  .location-table tbody tr.channel-header-row td.num {
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 600;
+    color: var(--ink);
+    font-size: 12px;
+  }
+  .location-table tbody tr.location-row td.location-name {
+    padding-left: 28px;
+    color: var(--ink-soft);
+    font-weight: 400;
+  }
+  .location-table tbody tr.location-row td {
+    color: var(--ink-soft);
+    font-size: 12px;
+  }
+  tfoot td {
+    padding: 14px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    font-weight: 600;
+    border-top: 1.5px solid var(--ink);
+    color: var(--ink);
+  }
+  tfoot td.num { text-align: right; }
+  tfoot td:first-child { font-family: 'Inter Tight', sans-serif; }
+
+  /* FOOTER */
+  .footer {
+    margin-top: 64px;
+    padding-top: 24px;
+    border-top: 1px solid var(--line-strong);
+    display: flex;
+    justify-content: space-between;
+    font-size: 11px;
+    color: var(--ink-muted);
+    letter-spacing: 0.05em;
+  }
+  .footer .mono { font-family: 'JetBrains Mono', monospace; }
+
+  /* HIDDEN HELPER */
+  .ytd-only.hidden, .quarter-only.hidden, .month-only.hidden { display: none; }
 
   @media (max-width: 900px) {
     .container { padding: 32px 20px 60px; }
@@ -366,9 +425,11 @@
     .header { flex-direction: column; align-items: flex-start; gap: 20px; }
     .header-meta { text-align: left; }
     .kpi-grid { grid-template-columns: repeat(2, 1fr); }
-    .grid-2, .grid-3 { grid-template-columns: 1fr; }
+    .grid-2, .grid-2.equal { grid-template-columns: 1fr; }
     .commentary-text { font-size: 18px; }
     .commentary-stats { flex-wrap: wrap; gap: 24px; }
+    .tabs-wrap { flex-direction: column; align-items: flex-start; gap: 12px; }
+    .tab { padding: 10px 16px; font-size: 16px; }
   }
 </style>
 </head>
@@ -377,42 +438,33 @@
 
   <!-- HEADER -->
   <div class="header">
-    <div class="brand">
-      <div class="brand-mark">Monos · Travel Co.</div>
+    <div>
+      <div class="brand-mark">Monos · Travel</div>
       <div class="brand-title">Financial Performance</div>
-      <div class="brand-sub">Quarter One, Fiscal 2026</div>
+      <div class="brand-sub" id="brand-sub">March 2026</div>
     </div>
     <div class="header-meta">
       <div class="as-of">As of March 31, 2026</div>
       <div>USD thousands · unaudited</div>
-      <div class="tag">Internal & Investor</div>
+      <div class="tag">Internal &amp; Investor</div>
     </div>
+  </div>
+
+  <!-- PERIOD TABS -->
+  <div class="tabs-wrap">
+    <div class="tabs">
+      <button class="tab active" data-period="month">March 2026<span class="tab-sub">Single Month</span></button>
+      <button class="tab" data-period="quarter">Q1 2026<span class="tab-sub">Quarter</span></button>
+      <button class="tab" data-period="ytd">YTD 2026<span class="tab-sub">Year-to-Date</span></button>
+    </div>
+    <div class="tab-meta" id="tab-meta">comparing March 2026 vs March 2025</div>
   </div>
 
   <!-- COMMENTARY -->
   <div class="commentary">
-    <div class="commentary-label">Quarter in review</div>
-    <div class="commentary-text">
-      Revenue held essentially flat year-over-year while <em>EBITDA losses narrowed by 66%</em>, reflecting a deliberate pivot toward marketing efficiency and tighter operating discipline. Gross margin compressed modestly on channel mix and shipping costs, but contribution margin remained resilient.
-    </div>
-    <div class="commentary-stats">
-      <div class="cs-item">
-        <div class="cs-num">$16.97M</div>
-        <div class="cs-lbl">Q1 Revenue</div>
-      </div>
-      <div class="cs-item">
-        <div class="cs-num">-$1.98M</div>
-        <div class="cs-lbl">Q1 EBITDA</div>
-      </div>
-      <div class="cs-item">
-        <div class="cs-num">30.6%</div>
-        <div class="cs-lbl">Marketing / Revenue</div>
-      </div>
-      <div class="cs-item">
-        <div class="cs-num">$1.03M</div>
-        <div class="cs-lbl">Net Cash Position</div>
-      </div>
-    </div>
+    <div class="commentary-label" id="commentary-label">March in review</div>
+    <div class="commentary-text" id="commentary-text"></div>
+    <div class="commentary-stats" id="commentary-stats"></div>
   </div>
 
   <!-- KPI GRID -->
@@ -421,57 +473,29 @@
       <span class="section-num">01</span>
       <span class="section-title">Headline metrics</span>
       <span class="section-rule"></span>
-      <span class="section-note">Q1 2026 vs Q1 2025</span>
+      <span class="section-note" id="kpi-note">March 2026 vs March 2025</span>
     </div>
-
-    <div class="kpi-grid">
-      <div class="kpi">
-        <div class="kpi-label">Revenue</div>
-        <div class="kpi-value">$16.97M</div>
-        <div class="kpi-sub">vs $17.85M prior <span class="delta neg">-4.9%</span></div>
-      </div>
-      <div class="kpi">
-        <div class="kpi-label">Gross Margin</div>
-        <div class="kpi-value">62.0%</div>
-        <div class="kpi-sub">prior 66.6% <span class="delta neg">-4.5 pp</span></div>
-      </div>
-      <div class="kpi">
-        <div class="kpi-label">Contribution Margin</div>
-        <div class="kpi-value">45.4%</div>
-        <div class="kpi-sub">prior 45.5% <span class="delta neg">-0.1 pp</span></div>
-      </div>
-      <div class="kpi">
-        <div class="kpi-label">EBITDA</div>
-        <div class="kpi-value">-$1.98M</div>
-        <div class="kpi-sub">prior -$5.85M <span class="delta pos">$3.87M improvement</span></div>
-      </div>
-      <div class="kpi">
-        <div class="kpi-label">Cash on Hand</div>
-        <div class="kpi-value small">$7.23M</div>
-        <div class="kpi-sub">at March 31, 2026 · USD equivalent</div>
-      </div>
-      <div class="kpi">
-        <div class="kpi-label">Line of Credit Drawn</div>
-        <div class="kpi-value small">$6.20M</div>
-        <div class="kpi-sub">RBC facility, maturity August 2026</div>
-      </div>
-      <div class="kpi">
-        <div class="kpi-label">Inventory</div>
-        <div class="kpi-value small">$14.30M</div>
-        <div class="kpi-sub">on-hand + in-transit</div>
-      </div>
-      <div class="kpi">
-        <div class="kpi-label">Marketing Efficiency</div>
-        <div class="kpi-value small">30.6%</div>
-        <div class="kpi-sub">performance ads / revenue · prior 39.6%</div>
-      </div>
-    </div>
+    <div class="kpi-grid" id="kpi-grid"></div>
   </div>
 
-  <!-- REVENUE & EBITDA TREND -->
+  <!-- REVENUE QUALITY (period-dependent) -->
   <div class="section">
     <div class="section-label">
       <span class="section-num">02</span>
+      <span class="section-title">Revenue quality</span>
+      <span class="section-rule"></span>
+      <span class="section-note" id="revq-note">March 2026 vs March 2025</span>
+    </div>
+    <div class="kpi-grid" id="revq-grid"></div>
+    <div style="margin-top: 14px; font-size: 12px; color: var(--ink-soft); font-style: italic; font-family: 'Fraunces', serif;" id="revq-caption">
+      Net Revenue = Gross Revenue less Discounts and Returns. Total Revenue includes shipping, insurance, restocking, and warranty revenue.
+    </div>
+  </div>
+
+  <!-- TRAJECTORY (always 15-month view, not period-dependent) -->
+  <div class="section">
+    <div class="section-label">
+      <span class="section-num">03</span>
       <span class="section-title">Trajectory</span>
       <span class="section-rule"></span>
       <span class="section-note">15-month view, monthly</span>
@@ -481,12 +505,10 @@
       <div class="card">
         <div class="card-header">
           <div class="card-eyebrow">Top line</div>
-          <div class="card-title">Monthly Revenue</div>
+          <div class="card-title">Monthly Net Revenue</div>
           <div class="card-sub">January 2025 through March 2026</div>
         </div>
-        <div class="chart-box tall">
-          <canvas id="chartRevenue"></canvas>
-        </div>
+        <div class="chart-box tall"><canvas id="chartRevenue"></canvas></div>
       </div>
       <div class="card">
         <div class="card-header">
@@ -494,674 +516,926 @@
           <div class="card-title">Monthly EBITDA</div>
           <div class="card-sub">Loss trajectory narrowing</div>
         </div>
-        <div class="chart-box tall">
-          <canvas id="chartEbitda"></canvas>
-        </div>
+        <div class="chart-box tall"><canvas id="chartEbitda"></canvas></div>
       </div>
     </div>
   </div>
 
-  <!-- MARGIN PROFILE -->
+  <!-- MARGIN PROFILE (always 15-month view) -->
   <div class="section">
     <div class="section-label">
-      <span class="section-num">03</span>
+      <span class="section-num">04</span>
       <span class="section-title">Margin profile</span>
       <span class="section-rule"></span>
       <span class="section-note">% of total revenue</span>
     </div>
-
     <div class="card">
       <div class="card-header">
         <div class="card-eyebrow">Unit economics</div>
-        <div class="card-title">Gross, Contribution & EBITDA margin</div>
+        <div class="card-title">Gross, Contribution &amp; EBITDA margin</div>
         <div class="card-sub">Monthly evolution shows recovery in contribution margin from the Q4 2025 promotional trough</div>
       </div>
-      <div class="chart-box tall">
-        <canvas id="chartMargins"></canvas>
-      </div>
+      <div class="chart-box tall"><canvas id="chartMargins"></canvas></div>
     </div>
   </div>
 
   <!-- CHANNEL BREAKDOWN -->
   <div class="section">
     <div class="section-label">
-      <span class="section-num">04</span>
+      <span class="section-num">05</span>
       <span class="section-title">Channel performance</span>
       <span class="section-rule"></span>
-      <span class="section-note">Q1 2026</span>
+      <span class="section-note" id="channel-note">March 2026</span>
     </div>
 
-    <div class="grid-2">
+    <div class="grid-2 equal" style="margin-bottom: 24px;">
       <div class="card">
         <div class="card-header">
           <div class="card-eyebrow">Revenue mix</div>
-          <div class="card-title">By segment</div>
-          <div class="card-sub">Share of Q1 2026 revenue</div>
+          <div class="card-title">By channel</div>
+          <div class="card-sub" id="seg-sub">Share of March 2026 net revenue</div>
         </div>
-        <div class="chart-box">
-          <canvas id="chartSegMix"></canvas>
-        </div>
+        <div class="chart-box"><canvas id="chartSegMix"></canvas></div>
       </div>
       <div class="card">
         <div class="card-header">
-          <div class="card-eyebrow">Segment overview</div>
-          <div class="card-title">Quarter-over-quarter</div>
+          <div class="card-eyebrow">Revenue mix</div>
+          <div class="card-title">By geography</div>
+          <div class="card-sub" id="geo-sub">Share of March 2026 net revenue</div>
         </div>
-        <table>
-          <thead>
-            <tr>
-              <th>Segment</th>
-              <th class="num">Q1 2025</th>
-              <th class="num">Q1 2026</th>
-              <th class="num">YoY</th>
-              <th class="num">Mix</th>
-            </tr>
-          </thead>
-          <tbody>
-            
-        <tr>
-          <td class="seg-name">E-Commerce</td>
-          <td class="num">$16.99M</td>
-          <td class="num">$14.67M</td>
-          <td class="num neg">-13.7%</td>
-          <td class="num">86.4%</td>
-        </tr>
-        <tr>
-          <td class="seg-name">Retail</td>
-          <td class="num">$572K</td>
-          <td class="num">$1.50M</td>
-          <td class="num pos">+162.5%</td>
-          <td class="num">8.9%</td>
-        </tr>
-        <tr>
-          <td class="seg-name">Wholesale</td>
-          <td class="num">$276K</td>
-          <td class="num">$678K</td>
-          <td class="num pos">+145.8%</td>
-          <td class="num">4.0%</td>
-        </tr>
-        <tr>
-          <td class="seg-name">Corporate</td>
-          <td class="num">$7K</td>
-          <td class="num">$121K</td>
-          <td class="num pos">+1582.4%</td>
-          <td class="num">0.7%</td>
-        </tr>
-          </tbody>
-          <tfoot>
-            <tr>
-              <td>Total</td>
-              <td class="num">$17.85M</td>
-              <td class="num">$16.97M</td>
-              <td class="num">-4.9%</td>
-              <td class="num">100.0%</td>
-            </tr>
-          </tfoot>
-        </table>
+        <div class="chart-box"><canvas id="chartGeoMix"></canvas></div>
       </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <div class="card-eyebrow">Channel overview</div>
+        <div class="card-title" id="seg-title">Net Revenue by channel, period-over-period</div>
+      </div>
+      <table>
+        <thead>
+          <tr>
+            <th>Channel</th>
+            <th class="num" id="th-prior">Mar 2025</th>
+            <th class="num" id="th-current">Mar 2026</th>
+            <th class="num">YoY</th>
+            <th class="num">Mix</th>
+          </tr>
+        </thead>
+        <tbody id="seg-tbody"></tbody>
+        <tfoot id="seg-tfoot"></tfoot>
+      </table>
     </div>
   </div>
 
   <!-- DETAILED CHANNELS -->
   <div class="section">
     <div class="section-label">
-      <span class="section-num">05</span>
-      <span class="section-title">Channel detail</span>
+      <span class="section-num">06</span>
+      <span class="section-title">Location detail</span>
       <span class="section-rule"></span>
-      <span class="section-note">all active channels</span>
+      <span class="section-note">all active locations · net revenue basis · grouped by channel</span>
     </div>
 
     <div class="card" style="padding-top: 24px;">
-      <table>
+      <table class="location-table">
         <thead>
           <tr>
-            <th>Channel</th>
-            <th>Segment</th>
-            <th class="num">Q1 2026 Revenue</th>
+            <th>Location</th>
+            <th class="num" id="th-ch-rev">March 2026 Net Rev</th>
             <th class="num">Share</th>
             <th class="num">YoY</th>
             <th class="num">Gross Margin %</th>
+            <th class="num">Contribution Margin %</th>
+            <th class="num">EBITDA</th>
           </tr>
         </thead>
-        <tbody>
-          
-        <tr>
-          <td>E-Com US</td>
-          <td class="seg-tag">E-Commerce</td>
-          <td class="num">$9.66M</td>
-          <td class="num">56.9%</td>
-          <td class="num neg">-23.2%</td>
-          <td class="num">58.2%</td>
-        </tr>
-        <tr>
-          <td>E-Com Canada</td>
-          <td class="seg-tag">E-Commerce</td>
-          <td class="num">$4.09M</td>
-          <td class="num">24.1%</td>
-          <td class="num pos">+20.5%</td>
-          <td class="num">70.0%</td>
-        </tr>
-        <tr>
-          <td>E-Com UK</td>
-          <td class="seg-tag">E-Commerce</td>
-          <td class="num">$453K</td>
-          <td class="num">2.7%</td>
-          <td class="num neg">-25.7%</td>
-          <td class="num">77.7%</td>
-        </tr>
-        <tr>
-          <td>E-Com Australia</td>
-          <td class="seg-tag">E-Commerce</td>
-          <td class="num">$346K</td>
-          <td class="num">2.0%</td>
-          <td class="num neg">-16.0%</td>
-          <td class="num">69.2%</td>
-        </tr>
-        <tr>
-          <td>Retail Ossington</td>
-          <td class="seg-tag">Retail</td>
-          <td class="num">$332K</td>
-          <td class="num">2.0%</td>
-          <td class="num pos">+19.2%</td>
-          <td class="num">67.9%</td>
-        </tr>
-        <tr>
-          <td>Retail Kitsilano</td>
-          <td class="seg-tag">Retail</td>
-          <td class="num">$326K</td>
-          <td class="num">1.9%</td>
-          <td class="num pos">+10.9%</td>
-          <td class="num">68.7%</td>
-        </tr>
-        <tr>
-          <td>Wholesale Corp CA</td>
-          <td class="seg-tag">Wholesale</td>
-          <td class="num">$316K</td>
-          <td class="num">1.9%</td>
-          <td class="num pos">+273.1%</td>
-          <td class="num">55.1%</td>
-        </tr>
-        <tr>
-          <td>Retail Mercer</td>
-          <td class="seg-tag">Retail</td>
-          <td class="num">$198K</td>
-          <td class="num">1.2%</td>
-          <td class="num ">—</td>
-          <td class="num">63.4%</td>
-        </tr>
-        <tr>
-          <td>Wholesale Corp US</td>
-          <td class="seg-tag">Wholesale</td>
-          <td class="num">$191K</td>
-          <td class="num">1.1%</td>
-          <td class="num pos">+5.8%</td>
-          <td class="num">51.5%</td>
-        </tr>
-        <tr>
-          <td>Wholesale Amazon</td>
-          <td class="seg-tag">Wholesale</td>
-          <td class="num">$167K</td>
-          <td class="num">1.0%</td>
-          <td class="num ">—</td>
-          <td class="num">36.9%</td>
-        </tr>
-        <tr>
-          <td>Retail Abbot Kinney</td>
-          <td class="seg-tag">Retail</td>
-          <td class="num">$160K</td>
-          <td class="num">0.9%</td>
-          <td class="num ">—</td>
-          <td class="num">67.5%</td>
-        </tr>
-        <tr>
-          <td>Retail Georgetown</td>
-          <td class="seg-tag">Retail</td>
-          <td class="num">$128K</td>
-          <td class="num">0.8%</td>
-          <td class="num ">—</td>
-          <td class="num">64.0%</td>
-        </tr>
-        <tr>
-          <td>Retail Newbury</td>
-          <td class="seg-tag">Retail</td>
-          <td class="num">$123K</td>
-          <td class="num">0.7%</td>
-          <td class="num ">—</td>
-          <td class="num">63.6%</td>
-        </tr>
-        <tr>
-          <td>Postcard West Loop</td>
-          <td class="seg-tag">Retail</td>
-          <td class="num">$120K</td>
-          <td class="num">0.7%</td>
-          <td class="num ">—</td>
-          <td class="num">68.1%</td>
-        </tr>
-        <tr>
-          <td>E-Com EU</td>
-          <td class="seg-tag">E-Commerce</td>
-          <td class="num">$119K</td>
-          <td class="num">0.7%</td>
-          <td class="num ">—</td>
-          <td class="num">64.1%</td>
-        </tr>
-        <tr>
-          <td>Retail West Loop</td>
-          <td class="seg-tag">Retail</td>
-          <td class="num">$116K</td>
-          <td class="num">0.7%</td>
-          <td class="num ">—</td>
-          <td class="num">57.8%</td>
-        </tr>
-        <tr>
-          <td>Corporate CA</td>
-          <td class="seg-tag">Corporate</td>
-          <td class="num">$102K</td>
-          <td class="num">0.6%</td>
-          <td class="num pos">+1397.6%</td>
-          <td class="num">52.6%</td>
-        </tr>
-        <tr>
-          <td>Corporate US</td>
-          <td class="seg-tag">Corporate</td>
-          <td class="num">$20K</td>
-          <td class="num">0.1%</td>
-          <td class="num pos">+4610.8%</td>
-          <td class="num">-40.9%</td>
-        </tr>
-        <tr>
-          <td>Wholesale Selfridges</td>
-          <td class="seg-tag">Wholesale</td>
-          <td class="num">$3K</td>
-          <td class="num">0.0%</td>
-          <td class="num ">—</td>
-          <td class="num">35.1%</td>
-        </tr>
-        </tbody>
+        <tbody id="channel-tbody"></tbody>
       </table>
+    </div>
+  </div>
+
+  <!-- INVENTORY (from Fulfil) -->
+  <div class="section">
+    <div class="section-label">
+      <span class="section-num">07</span>
+      <span class="section-title">Inventory</span>
+      <span class="section-rule"></span>
+      <span class="section-note" id="inv-note">data via Fulfil · as of March 31, 2026</span>
+    </div>
+
+    <div class="kpi-grid" id="inv-kpi-grid" style="margin-bottom: 24px;"></div>
+
+    <div class="grid-2 equal" style="margin-bottom: 24px;">
+      <div class="card">
+        <div class="card-header">
+          <div class="card-eyebrow">Working capital</div>
+          <div class="card-title">Inventory Value &amp; Units Shipped</div>
+          <div class="card-sub">Inventory at cost (left axis) vs monthly units shipped (right axis)</div>
+        </div>
+        <div class="chart-box tall"><canvas id="chartInventory"></canvas></div>
+      </div>
+      <div class="card">
+        <div class="card-header">
+          <div class="card-eyebrow">Distribution network</div>
+          <div class="card-title">Units on Hand by Warehouse</div>
+          <div class="card-sub">Current snapshot · top warehouses by units</div>
+        </div>
+        <div class="chart-box tall"><canvas id="chartWarehouses"></canvas></div>
+      </div>
     </div>
   </div>
 
   <!-- BALANCE SHEET -->
   <div class="section">
     <div class="section-label">
-      <span class="section-num">06</span>
+      <span class="section-num">08</span>
       <span class="section-title">Balance sheet position</span>
       <span class="section-rule"></span>
-      <span class="section-note">CAD converted to USD at 0.72</span>
+      <span class="section-note">15-month view · USD</span>
     </div>
 
-    <div class="grid-2">
-      <div class="card">
-        <div class="card-header">
-          <div class="card-eyebrow">Liquidity</div>
-          <div class="card-title">Cash & Line of Credit</div>
-          <div class="card-sub">Monthly position over 15 months</div>
-        </div>
-        <div class="chart-box tall">
-          <canvas id="chartCash"></canvas>
-        </div>
+    <div class="card">
+      <div class="card-header">
+        <div class="card-eyebrow">Liquidity</div>
+        <div class="card-title">Cash &amp; Debt Position</div>
+        <div class="card-sub">RBC line of credit and EDC term loan</div>
       </div>
-      <div class="card">
-        <div class="card-header">
-          <div class="card-eyebrow">Working capital</div>
-          <div class="card-title">Inventory trajectory</div>
-          <div class="card-sub">On-hand + in-transit, USD equivalent</div>
-        </div>
-        <div class="chart-box tall">
-          <canvas id="chartInventory"></canvas>
-        </div>
-      </div>
+      <div class="chart-box tall"><canvas id="chartCash"></canvas></div>
     </div>
   </div>
 
-  <!-- FOOTER -->
   <div class="footer">
     <div>© Monos Travel Ltd. · Prepared by Finance · Confidential</div>
-    <div class="mono">FY2026 Q1 · Data through 03/31/2026 · Generated 04/20/2026</div>
+    <div class="mono">FY2026 · Data through 03/31/2026 · Generated 04/20/2026</div>
   </div>
 
 </div>
 
 <script>
-const DATA = {"labels": ["Jan 2025", "Feb 2025", "Mar 2025", "Apr 2025", "May 2025", "Jun 2025", "Jul 2025", "Aug 2025", "Sep 2025", "Oct 2025", "Nov 2025", "Dec 2025", "Jan 2026", "Feb 2026", "Mar 2026"], "pnl": {"rev": [5344.380309999931, 6663.944309999975, 5839.780569999993, 5480.54385000001, 5353.419790000001, 5326.200189999993, 6739.176849999999, 4880.788419999999, 5137.162719999998, 4651.174419999999, 12865.33738, 10118.1196, 5393.036320000001, 4933.194340000001, 6645.472650000001], "cogs": [1766.8521300000157, 2033.9562400000036, 1743.8247900000101, 1926.9697099999944, 1544.2059800000002, 1703.9156799999992, 2282.6654400000007, 1676.29086, 1721.46629, 1652.14004, 4823.66771, 3728.267399999998, 1779.4114100000002, 1814.34442, 2582.22964], "gm": [3507.002609999916, 4476.380149999972, 3902.3376999999828, 3408.3220300000157, 3588.0973800000006, 3472.178979999994, 4421.532499999998, 3087.179749999999, 3221.234049999998, 2870.507179999999, 7985.521420000001, 5284.9774000000025, 3533.434710000001, 3026.163270000001, 3971.0574000000006], "down": [931.1748599999999, 1682.81543, 1143.8780100000001, 954.15545, 889.40021, 1117.84128, 1117.20239, 949.9544400000001, 805.13933, 695.7199, 1005.27962, 1772.60921, 1106.69429, 888.2222899999999, 827.56942], "cm": [2575.827749999916, 2793.5647199999717, 2758.4596899999824, 2454.1665800000155, 2698.6971700000004, 2354.337699999994, 3304.3301099999985, 2137.225309999999, 2416.0947199999982, 2174.787279999999, 6980.241800000001, 3512.3681900000024, 2426.740420000001, 2137.940980000001, 3143.487980000001], "perfad": [2028.97795, 2676.9253099999996, 2368.66579, 1941.5711300000003, 1903.99478, 1758.34647, 1944.0464200000001, 2059.1572699999997, 1598.5620999999999, 1682.92788, 4227.388150000001, 2347.37941, 1559.30049, 1610.0145699999998, 2031.20557], "totad": [2492.05226, 3084.13465, 4033.2862800000003, 2285.90833, 2089.77655, 1989.1383899999998, 2419.47105, 2220.786549999999, 2102.7096399999996, 2210.2594499999996, 4576.608660000002, 2668.8366, 1656.69459, 1790.78731, 2111.4467], "tme": [58.5478, 29.26366, 23.50282, 35.06908, 20.872110000000006, 20.453379999999996, 18.3714, 55.79709, 109.17594, 116.46907000000002, 63.353860000000005, 41.848, 24.216299999999997, 25.93559, 38.96622000000001], "payroll": [738.55838, 653.1238999999999, 647.07543, 658.7289000000002, 885.3819599999999, 783.3504500000003, 545.2077300000001, 497.58310000000006, 519.96033, 549.83727, 594.0546500000002, 1244.7216200000003, 588.3735999999999, 593.18536, 560.26793], "lic": [335.67213999999996, 350.76993, 370.22302999999994, 279.06412, 310.9498899999999, 309.12844, 343.56145, 276.81976000000003, 348.19813, 208.04758, 809.9564399999999, 434.7785500000001, 353.56519000000003, 334.45922, 322.88488], "ps": [173.95920999999998, 185.80646000000002, 207.53748000000004, 208.24157999999997, 221.13516000000004, 175.73521, 181.14615000000003, 175.08738999999997, 124.49728, 239.23873000000003, 185.07389, 168.05835000000002, 112.51534, 133.22399, 124.40592], "ga": [84.91081, 95.98155, 96.36299, 86.23251, 112.11525, 113.39039000000001, -89.09241000000002, 102.72951, 823.2879599999999, 1569.4816899999998, 480.12836, 1143.3550500000001, 384.03806000000003, 362.6717, 368.97219000000007], "opex": [3898.7487, 4399.81903, 5381.22307, 3554.2212800000007, 3647.30707, 3397.30102, 3429.61666, 3342.075739999999, 4076.7004999999995, 4912.12083, 6719.220560000002, 5710.724890000001, 3119.94358, 3240.9536799999996, 3529.69593], "oi": [-1322.9209500000843, -1606.254310000028, -2622.7633800000176, -1100.0546999999851, -948.6098999999995, -1042.9633200000058, -125.28655000000163, -1204.85043, -1660.6057800000012, -2737.3335500000007, 261.0212399999991, -2198.356699999999, -693.2031599999991, -1103.0126999999984, -386.2079499999991], "ebitda": [-1405.9369500000844, -1586.850950000028, -2857.1406400000174, -942.1090099999851, -985.6964099999996, -1047.6125900000059, -150.9210800000016, -1145.30714, -1530.3523400000013, -2690.8828000000008, 331.97720999999916, -2407.2368899999988, -657.044329999999, -1090.5809399999985, -235.56303999999906], "amort": [39.29839, 37.54501, 39.33063, 39.16963, 39.16963, 40.25086, 40.044940000000004, 40.381370000000004, 82.68533000000001, 128.72438000000002, 135.47259, 152.21464, 141.72647, 141.55434, 152.82978], "intloc": [0, 5.61794, 19.33194, 23.67221, 35.39372, 36.75607, 35.78228, 36.37914, 36.69473, 34.295199999999994, 71.07948, 150.36852, 80.3835, 78.91047, 88.6951], "ni": [-1443.3686100000843, -1626.258840000028, -2913.382980000017, -1001.9696599999851, -1070.1789899999997, -1145.749550000006, -231.8224800000016, -1219.3244, -1654.2778100000012, -2828.369370000001, 117.12344999999917, 2029.2851000000005, -872.8789599999991, -1307.4082999999985, -474.21319999999906]}, "gm_pct": [65.62037891349017, 67.1731326338168, 66.82336182367872, 62.18948562924115, 67.02439787558674, 65.19054590773837, 65.60938521742457, 63.251661091262775, 62.70453605565368, 61.71575006211011, 62.07005058735584, 52.23280222937869, 65.51846678458861, 61.34287565893868, 59.75583091144014], "cm_pct": [48.196939599905626, 41.92058921932951, 47.23567361709938, 44.7796176286412, 50.410714568677605, 44.202951748233055, 49.031657479058424, 43.78852607587525, 47.03169534797213, 46.757809611448614, 54.2561892768645, 34.71364570547281, 44.997665063008526, 43.337862501480146, 47.30269983129041], "ebitda_pct": [-26.30682826537287, -23.812488162885533, -48.92547940375816, -17.190064267070564, -18.412462475691626, -19.669042706410313, -2.2394586662316427, -23.465617466778042, -29.789835818165432, -57.853835548055, 2.580400343920084, -23.791346467183473, -12.18319868463261, -22.10699325500317, -3.5447146110818624], "perfad_pct": [37.96469997098739, 40.17028332579222, 40.560869738295715, 35.426614276610465, 35.565953253966654, 33.01315022483228, 28.846941744821557, 42.18902957485709, 31.117606880087312, 36.182858951997765, 32.858743032823604, 23.199759469140886, 28.91322063263983, 32.636349980082066, 30.56525362420986], "bs": {"cash": [6858.6164136000025, 5716.5945839999995, 6633.495, 5129.665120799999, 4148.385436799999, 6325.960341600001, 5875.652663999998, 4955.1312528, 2385.3471696, 5560.2997128, 11117.4760296, 9278.768534400004, 8268.2188056, 6466.633164, 7233.960506400001], "loc": [3477.4281072, 3488.7222216, 6037.7063112, 6248.8925208, 6287.980788, 6314.7324024, 6248.7298224, 6286.464, 6209.5373928, 6179.528167199999, 6176.9436984, 6308.5309704, 6341.5171224, 6330.3659712, 6202.935050399999], "inv": [23727.310272, 22942.6816032, 22145.3218656, 21562.102123199995, 21463.953429600002, 21148.855919999998, 20576.270015999995, 21068.703079199997, 19879.965662399998, 19328.819075999996, 17200.864324799997, 16018.517649599999, 15721.3273176, 15002.9834904, 14304.035080799998], "ar": [-135.9625536, 149.80894559999996, 217.78507440000007, 339.25959359999996, -223.62289199999995, 65.20066559999998, 65.9214216, -624.4458983999999, 321.4494432, 561.0659544, -2796.9870744, -710.1802943999999, -509.2410744, -558.8686583999998, -306.5717303999999], "ap": [2771.1586655999995, 3499.6848479999994, 2352.4802999999993, 3640.6907063999997, 2585.1988295999995, 3123.2841911999994, 2937.6272591999996, 3446.3689056, 3931.429428, 3363.2366543999997, 3329.1526464, 2183.3387208, 2371.6051919999995, 1948.809132, 1400.8172256], "equity": [30414.8949696, 28330.774948799997, 27782.990539199996, 26969.165740800003, 26300.1110904, 25489.096387199992, 25331.891803199997, 24379.6251024, 23226.6398184, 21194.7092856, 21281.602428, 23022.282311999996, 22398.348535199995, 21461.409223199997, 21124.4877288], "assets": [40531.2595128, 40164.4895832, 41026.9538376, 39711.853821599994, 37670.7780144, 37681.1674488, 37843.9199064, 37027.908, 35879.1495552, 38235.7972296, 37890.98388, 37052.648964, 35987.916203999994, 33628.2253128, 36646.4739096], "liab": [10116.3645432, 11833.7146344, 13243.963298399998, 12742.688080800002, 11370.666924000001, 12192.071061600001, 12512.028103200006, 12648.282897600006, 12652.509736799999, 17041.087943999988, 16609.381451999994, 14030.366651999997, 13589.567668799993, 12166.816089599997, 15521.9861808]}, "channels": [{"name": "E-Com US", "segment": "E-Commerce", "fy25": 50491.25861000001, "q1_25": 12573.87852, "q1_26": 9659.49577, "gm_q1_26": 5625.19866, "yoy": -23.17807306126257}, {"name": "E-Com Canada", "segment": "E-Commerce", "fy25": 17435.451520000002, "q1_25": 3397.38033, "q1_26": 4092.9461499999998, "gm_q1_26": 2865.56878, "yoy": 20.473592958018916}, {"name": "E-Com UK", "segment": "E-Commerce", "fy25": 2558.29321, "q1_25": 610.02882, "q1_26": 453.26776000000007, "gm_q1_26": 352.03514, "yoy": -25.69732033316064}, {"name": "E-Com Australia", "segment": "E-Commerce", "fy25": 1935.1981899999996, "q1_25": 411.64424, "q1_26": 345.72087, "gm_q1_26": 239.404, "yoy": -16.014646530703317}, {"name": "E-Com EU", "segment": "E-Commerce", "fy25": 164.75375, "q1_25": 0, "q1_26": 118.78453999999999, "gm_q1_26": 76.10873000000001, "yoy": null}, {"name": "Wholesale Amazon", "segment": "Wholesale", "fy25": 0, "q1_25": 0, "q1_26": 167.11136, "gm_q1_26": 61.61547999999999, "yoy": null}, {"name": "Wholesale SSense", "segment": "Wholesale", "fy25": 10.35414, "q1_25": 10.35414, "q1_26": 0, "gm_q1_26": 0, "yoy": -100.0}, {"name": "Wholesale Corp CA", "segment": "Wholesale", "fy25": 424.44564999999994, "q1_25": 84.77092, "q1_26": 316.30400000000003, "gm_q1_26": 174.35450000000006, "yoy": 273.1279547278713}, {"name": "Wholesale Corp US", "segment": "Wholesale", "fy25": 1121.94156, "q1_25": 180.78984999999997, "q1_26": 191.36373999999998, "gm_q1_26": 98.49131999999999, "yoy": 5.848718830177694}, {"name": "Wholesale Selfridges", "segment": "Wholesale", "fy25": 94.47952, "q1_25": 0, "q1_26": 3.2836299999999996, "gm_q1_26": 1.1536699999999995, "yoy": null}, {"name": "Retail Kitsilano", "segment": "Retail", "fy25": 1512.04778, "q1_25": 293.97222, "q1_26": 326.06994999999995, "gm_q1_26": 223.90175999999997, "yoy": 10.918626936926202}, {"name": "Retail Ossington", "segment": "Retail", "fy25": 1483.6978, "q1_25": 278.21199, "q1_26": 331.71066, "gm_q1_26": 225.14837, "yoy": 19.229462396642216}, {"name": "Retail West Loop", "segment": "Retail", "fy25": 180.14181000000002, "q1_25": 0, "q1_26": 115.72146000000001, "gm_q1_26": 66.91112000000001, "yoy": null}, {"name": "Retail Newbury", "segment": "Retail", "fy25": 201.41909, "q1_25": 0, "q1_26": 122.6688, "gm_q1_26": 78.03146000000001, "yoy": null}, {"name": "Retail Mercer", "segment": "Retail", "fy25": 230.96672, "q1_25": 0, "q1_26": 197.77953999999997, "gm_q1_26": 125.37442999999999, "yoy": null}, {"name": "Retail Georgetown", "segment": "Retail", "fy25": 122.35355000000001, "q1_25": 0, "q1_26": 128.28196000000003, "gm_q1_26": 82.10356, "yoy": null}, {"name": "Retail Abbot Kinney", "segment": "Retail", "fy25": 187.96496000000002, "q1_25": 0, "q1_26": 159.89053, "gm_q1_26": 107.99173, "yoy": null}, {"name": "Postcard West Loop", "segment": "Retail", "fy25": 150.11135, "q1_25": 0, "q1_26": 119.91632, "gm_q1_26": 81.66785, "yoy": null}, {"name": "Corporate US", "segment": "Corporate", "fy25": 2.21385, "q1_25": 0.415, "q1_26": 19.55, "gm_q1_26": -8.004399999999997, "yoy": 4610.843373493976}, {"name": "Corporate CA", "segment": "Corporate", "fy25": 118.92482999999999, "q1_25": 6.800009999999999, "q1_26": 101.83627, "gm_q1_26": 53.599219999999995, "yoy": 1397.5900035441125}], "summary": {"rev": {"q1_25": 17848.1051899999, "q1_26": 16971.703310000004, "fy25": 78400.0284099999}, "cogs": {"q1_25": 5544.633160000029, "q1_26": 6175.98547, "fy25": 26604.22227000002}, "gm": {"q1_25": 11885.72045999987, "q1_26": 10530.655380000002, "fy25": 49225.27114999988}, "down": {"q1_25": 3757.8683, "q1_26": 2822.486, "fy25": 13065.17013}, "cm": {"q1_25": 8127.852159999869, "q1_26": 7708.169380000003, "fy25": 36160.10101999988}, "perfad": {"q1_25": 7074.56905, "q1_26": 5200.52063, "fy25": 26537.94266}, "totad": {"q1_25": 9609.47319, "q1_26": 5558.9286, "fy25": 32172.96841}, "tme": {"q1_25": 111.31428, "q1_26": 89.11811, "fy25": 592.72421}, "payroll": {"q1_25": 2038.7577099999999, "q1_26": 1741.8268899999998, "fy25": 8317.58372}, "lic": {"q1_25": 1056.6651, "q1_26": 1010.90929, "fy25": 4377.16946}, "ps": {"q1_25": 567.3031500000001, "q1_26": 370.14525, "fy25": 2245.5168900000003}, "ga": {"q1_25": 277.25535, "q1_26": 1115.6819500000001, "fy25": 4618.8836599999995}, "opex": {"q1_25": 13679.790799999999, "q1_26": 9890.59319, "fy25": 52469.07935}, "oi": {"q1_25": -5551.938640000129, "q1_26": -2182.4238099999966, "fy25": -16308.978330000124}, "ebitda": {"q1_25": -5849.92854000013, "q1_26": -1983.1883099999966, "fy25": -16418.069590000123}, "amort": {"q1_25": 116.17402999999999, "q1_26": 436.11059, "fy25": 814.2874}, "intloc": {"q1_25": 24.94988, "q1_26": 247.98907, "fy25": 485.37122999999997}, "ni": {"q1_25": -5983.010430000129, "q1_26": -2654.5004599999966, "fy25": -12988.294140000124}}, "as_of": "March 2026"};
+const DATA = {"as_of": "March 31, 2026", "current_month_name": "March", "current_year": 2026, "is_quarter_end": true, "periods": {"march_2025": {"rev": 5839.780569999993, "cogs": 1743.8247900000101, "gm": 3902.3376999999828, "down": 1143.8780100000001, "cm": 2758.4596899999824, "perfad": 2368.66579, "totad": 4033.2862800000003, "tme": 23.50282, "payroll": 647.07543, "lic": 370.22302999999994, "ps": 207.53748000000004, "ga": 96.36299, "opex": 5381.22307, "oi": -2622.7633800000176, "ebitda": -2857.1406400000174, "ni": -2913.382980000017, "gross_rev": 6830.353259999993, "discounts": -586.3203599999999, "returns": -484.34781999999996, "net_rev": 5759.685079999993, "other_rev": 80.09549000000001}, "march_2026": {"rev": 6645.472650000001, "cogs": 2582.22964, "gm": 3971.0574000000006, "down": 827.56942, "cm": 3143.487980000001, "perfad": 2031.20557, "totad": 2111.4467, "tme": 38.96622000000001, "payroll": 560.26793, "lic": 322.88488, "ps": 124.40592, "ga": 368.97219000000007, "opex": 3529.69593, "oi": -386.2079499999991, "ebitda": -235.56303999999906, "ni": -474.21319999999906, "gross_rev": 8477.74846, "discounts": -1513.27115, "returns": -500.64660999999995, "net_rev": 6463.8307, "other_rev": 181.64195}, "q1_2025": {"rev": 17848.1051899999, "cogs": 5544.633160000029, "gm": 11885.72045999987, "down": 3757.8683, "cm": 8127.852159999869, "perfad": 7074.56905, "totad": 9609.47319, "tme": 111.31428, "payroll": 2038.7577099999999, "lic": 1056.6651, "ps": 567.3031500000001, "ga": 277.25535, "opex": 13679.790799999999, "oi": -5551.938640000129, "ebitda": -5849.92854000013, "ni": -5983.010430000129, "gross_rev": 22184.21901999988, "discounts": -2863.718349999983, "returns": -1702.87778, "net_rev": 17617.6228899999, "other_rev": 230.4823}, "q1_2026": {"rev": 16971.703310000004, "cogs": 6175.98547, "gm": 10530.655380000002, "down": 2822.486, "cm": 7708.169380000003, "perfad": 5200.52063, "totad": 5558.9286, "tme": 89.11811, "payroll": 1741.8268899999998, "lic": 1010.90929, "ps": 370.14525, "ga": 1115.6819500000001, "opex": 9890.59319, "oi": -2182.4238099999966, "ebitda": -1983.1883099999966, "ni": -2654.5004599999966, "gross_rev": 21190.79632, "discounts": -2960.048559999999, "returns": -1663.41803, "net_rev": 16567.32973, "other_rev": 404.37358}, "ytd_2025": {"rev": 17848.1051899999, "cogs": 5544.633160000029, "gm": 11885.72045999987, "down": 3757.8683, "cm": 8127.852159999869, "perfad": 7074.56905, "totad": 9609.47319, "tme": 111.31428, "payroll": 2038.7577099999999, "lic": 1056.6651, "ps": 567.3031500000001, "ga": 277.25535, "opex": 13679.790799999999, "oi": -5551.938640000129, "ebitda": -5849.92854000013, "ni": -5983.010430000129, "gross_rev": 22184.21901999988, "discounts": -2863.718349999983, "returns": -1702.87778, "net_rev": 17617.6228899999, "other_rev": 230.4823}, "ytd_2026": {"rev": 16971.703310000004, "cogs": 6175.98547, "gm": 10530.655380000002, "down": 2822.486, "cm": 7708.169380000003, "perfad": 5200.52063, "totad": 5558.9286, "tme": 89.11811, "payroll": 1741.8268899999998, "lic": 1010.90929, "ps": 370.14525, "ga": 1115.6819500000001, "opex": 9890.59319, "oi": -2182.4238099999966, "ebitda": -1983.1883099999966, "ni": -2654.5004599999966, "gross_rev": 21190.79632, "discounts": -2960.048559999999, "returns": -1663.41803, "net_rev": 16567.32973, "other_rev": 404.37358}, "fy_2025": {"rev": 78400.0284099999, "cogs": 26604.22227000002, "gm": 49225.27114999988, "down": 13065.17013, "cm": 36160.10101999988, "perfad": 26537.94266, "totad": 32172.96841, "tme": 592.72421, "payroll": 8317.58372, "lic": 4377.16946, "ps": 2245.5168900000003, "ga": 4618.8836599999995, "opex": 52469.07935, "oi": -16308.978330000124, "ebitda": -16418.069590000123, "ni": -12988.294140000124, "gross_rev": 98214.4040899999, "discounts": -14979.74439999999, "returns": -6176.607849999999, "net_rev": 77119.6871599999, "other_rev": 1280.34125}}, "bs_periods": {"march_2025": {"cash": 9213.1875, "loc": 8385.70321, "edc": 0, "inv": 30757.391480000002}, "march_2026": {"cash": 10047.167370000001, "loc": 8615.18757, "edc": 5875, "inv": 19866.715389999998}, "q1_2025": {"cash": 9213.1875, "loc": 8385.70321, "edc": 0, "inv": 30757.391480000002}, "q1_2026": {"cash": 10047.167370000001, "loc": 8615.18757, "edc": 5875, "inv": 19866.715389999998}, "ytd_2025": {"cash": 9213.1875, "loc": 8385.70321, "edc": 0, "inv": 30757.391480000002}, "ytd_2026": {"cash": 10047.167370000001, "loc": 8615.18757, "edc": 5875, "inv": 19866.715389999998}, "fy_2025": {"cash": 12887.178520000007, "loc": 8761.84857, "edc": 5875, "inv": 22247.941179999998}}, "channels": [{"name": "E-Com United States", "segment": "E-Commerce", "geography": "United States", "march_2025_rev": 4313.49439, "march_2025_gross": 5044.94171, "march_2025_net": 4246.68216, "march_2025_disc": -354.55412, "march_2025_returns": -443.70543, "march_2025_gm": 3159.1654099999996, "march_2025_cm": 2028.6225199999997, "march_2025_ebitda": -833.1033800000004, "march_2026_rev": 3744.4014800000004, "march_2026_gross": 4755.99315, "march_2026_net": 3622.4903300000005, "march_2026_disc": -753.3300899999999, "march_2026_returns": -380.17273, "march_2026_gm": 2020.3997900000004, "march_2026_cm": 1558.4803600000005, "march_2026_ebitda": 95.58024000000046, "q1_2025_rev": 12573.87852, "q1_2025_gross": 15362.371050000002, "q1_2025_net": 12383.92309, "q1_2025_disc": -1401.1785, "q1_2025_returns": -1577.26946, "q1_2025_gm": 8853.62969, "q1_2025_cm": 6038.9287, "q1_2025_ebitda": -301.6012499999997, "q1_2026_rev": 9659.49577, "q1_2026_gross": 12113.16848, "q1_2026_net": 9405.4081, "q1_2026_disc": -1470.12541, "q1_2026_returns": -1237.63497, "q1_2026_gm": 5625.19866, "q1_2026_cm": 3819.9796400000005, "q1_2026_ebitda": -32.00098999999955, "ytd_2025_rev": 12573.87852, "ytd_2025_gross": 15362.371050000002, "ytd_2025_net": 12383.92309, "ytd_2025_disc": -1401.1785, "ytd_2025_returns": -1577.26946, "ytd_2025_gm": 8853.62969, "ytd_2025_cm": 6038.9287, "ytd_2025_ebitda": -301.6012499999997, "ytd_2026_rev": 9659.49577, "ytd_2026_gross": 12113.16848, "ytd_2026_net": 9405.4081, "ytd_2026_disc": -1470.12541, "ytd_2026_returns": -1237.63497, "ytd_2026_gm": 5625.19866, "ytd_2026_cm": 3819.9796400000005, "ytd_2026_ebitda": -32.00098999999955, "fy_2025_rev": 50491.258610000004, "fy_2025_gross": 61236.30491, "fy_2025_net": 49552.09139, "fy_2025_disc": -7305.7022099999995, "fy_2025_returns": -4377.40906, "fy_2025_gm": 31386.395070000002, "fy_2025_cm": 22984.83842, "fy_2025_ebitda": -452.9836399999984}, {"name": "E-Com Canada", "segment": "E-Commerce", "geography": "Canada", "march_2025_rev": 889.33592, "march_2025_gross": 1013.50001, "march_2025_net": 878.68859, "march_2025_disc": -117.84864, "march_2025_returns": -16.96278, "march_2025_gm": 349.50050999999996, "march_2025_cm": 408.99704999999994, "march_2025_ebitda": -245.35813000000007, "march_2026_rev": 1582.21074, "march_2026_gross": 1918.69797, "march_2026_net": 1543.26425, "march_2026_disc": -330.57863000000003, "march_2026_returns": -44.85509, "march_2026_gm": 1118.91181, "march_2026_cm": 842.34928, "march_2026_ebitda": 165.30160000000006, "q1_2025_rev": 3397.38033, "q1_2025_gross": 3872.51412, "q1_2025_net": 3366.58681, "q1_2025_disc": -439.08274, "q1_2025_returns": -66.84457, "q1_2025_gm": 1971.10018, "q1_2025_cm": 1207.0765, "q1_2025_ebitda": -543.9586000000002, "q1_2026_rev": 4092.9461499999998, "q1_2026_gross": 4936.5341, "q1_2026_net": 3989.20903, "q1_2026_disc": -715.69237, "q1_2026_returns": -231.6327, "q1_2026_gm": 2865.56878, "q1_2026_cm": 2096.16184, "q1_2026_ebitda": 454.0924600000001, "ytd_2025_rev": 3397.38033, "ytd_2025_gross": 3872.51412, "ytd_2025_net": 3366.58681, "ytd_2025_disc": -439.08274, "ytd_2025_returns": -66.84457, "ytd_2025_gm": 1971.10018, "ytd_2025_cm": 1207.0765, "ytd_2025_ebitda": -543.9586000000002, "ytd_2026_rev": 4092.9461499999998, "ytd_2026_gross": 4936.5341, "ytd_2026_net": 3989.20903, "ytd_2026_disc": -715.69237, "ytd_2026_returns": -231.6327, "ytd_2026_gm": 2865.56878, "ytd_2026_cm": 2096.16184, "ytd_2026_ebitda": 454.0924600000001, "fy_2025_rev": 17435.451520000002, "fy_2025_gross": 21310.61253, "fy_2025_net": 17196.13122, "fy_2025_disc": -3048.69449, "fy_2025_returns": -1112.63748, "fy_2025_gm": 11536.70519, "fy_2025_cm": 7795.645530000002, "fy_2025_ebitda": 2351.9117900000006}, {"name": "E-Com United Kingdom", "segment": "E-Commerce", "geography": "United Kingdom", "march_2025_rev": 172.07748999999998, "march_2025_gross": 198.64192, "march_2025_net": 170.48635, "march_2025_disc": -25.05238, "march_2025_returns": -3.10319, "march_2025_gm": 82.23536999999999, "march_2025_cm": 46.39665999999999, "march_2025_ebitda": -56.50983000000001, "march_2026_rev": 164.53452000000001, "march_2026_gross": 200.64334, "march_2026_net": 159.72727, "march_2026_disc": -33.23662, "march_2026_returns": -7.67945, "march_2026_gm": 130.56484, "march_2026_cm": 77.35227, "march_2026_ebitda": 34.710860000000004, "q1_2025_rev": 610.02882, "q1_2025_gross": 695.5417, "q1_2025_net": 606.1566, "q1_2025_disc": -87.10797, "q1_2025_returns": -2.27713, "q1_2025_gm": 412.13761, "q1_2025_cm": 337.08033, "q1_2025_ebitda": 84.17326000000003, "q1_2026_rev": 453.26776000000007, "q1_2026_gross": 529.6401, "q1_2026_net": 438.31499, "q1_2026_disc": -70.70389, "q1_2026_returns": -20.62122, "q1_2026_gm": 352.03514, "q1_2026_cm": 230.00770000000003, "q1_2026_ebitda": 72.08148000000003, "ytd_2025_rev": 610.02882, "ytd_2025_gross": 695.5417, "ytd_2025_net": 606.1566, "ytd_2025_disc": -87.10797, "ytd_2025_returns": -2.27713, "ytd_2025_gm": 412.13761, "ytd_2025_cm": 337.08033, "ytd_2025_ebitda": 84.17326000000003, "ytd_2026_rev": 453.26776000000007, "ytd_2026_gross": 529.6401, "ytd_2026_net": 438.31499, "ytd_2026_disc": -70.70389, "ytd_2026_returns": -20.62122, "ytd_2026_gm": 352.03514, "ytd_2026_cm": 230.00770000000003, "ytd_2026_ebitda": 72.08148000000003, "fy_2025_rev": 2558.29321, "fy_2025_gross": 3108.75342, "fy_2025_net": 2516.89046, "fy_2025_disc": -405.84362, "fy_2025_returns": -194.32084999999998, "fy_2025_gm": 2028.77566, "fy_2025_cm": 1603.51572, "fy_2025_ebitda": 808.6548900000001}, {"name": "E-Com Australia", "segment": "E-Commerce", "geography": "Australia", "march_2025_rev": 141.38112, "march_2025_gross": 165.65599, "march_2025_net": 140.33633, "march_2025_disc": -24.56075, "march_2025_returns": -0.75891, "march_2025_gm": 88.67883, "march_2025_cm": 59.32385000000001, "march_2025_ebitda": -23.55999000000001, "march_2026_rev": 119.86861999999999, "march_2026_gross": 141.74221, "march_2026_net": 116.362, "march_2026_disc": -21.18174, "march_2026_returns": -4.19847, "march_2026_gm": 84.89694, "march_2026_cm": 70.60569, "march_2026_ebitda": 39.68344999999999, "q1_2025_rev": 411.64424, "q1_2025_gross": 464.36694, "q1_2025_net": 409.18384000000003, "q1_2025_disc": -65.17496, "q1_2025_returns": 9.991859999999999, "q1_2025_gm": 249.25892000000002, "q1_2025_cm": 169.52153, "q1_2025_ebitda": -41.993130000000015, "q1_2026_rev": 345.72087, "q1_2026_gross": 400.93201, "q1_2026_net": 336.72828, "q1_2026_disc": -50.639300000000006, "q1_2026_returns": -13.56443, "q1_2026_gm": 239.404, "q1_2026_cm": 179.35810999999998, "q1_2026_ebitda": 71.16617999999998, "ytd_2025_rev": 411.64424, "ytd_2025_gross": 464.36694, "ytd_2025_net": 409.18384000000003, "ytd_2025_disc": -65.17496, "ytd_2025_returns": 9.991859999999999, "ytd_2025_gm": 249.25892000000002, "ytd_2025_cm": 169.52153, "ytd_2025_ebitda": -41.993130000000015, "ytd_2026_rev": 345.72087, "ytd_2026_gross": 400.93201, "ytd_2026_net": 336.72828, "ytd_2026_disc": -50.639300000000006, "ytd_2026_returns": -13.56443, "ytd_2026_gm": 239.404, "ytd_2026_cm": 179.35810999999998, "ytd_2026_ebitda": 71.16617999999998, "fy_2025_rev": 1935.19819, "fy_2025_gross": 2333.16588, "fy_2025_net": 1914.93188, "fy_2025_disc": -342.88058, "fy_2025_returns": -80.21976000000001, "fy_2025_gm": 1249.62, "fy_2025_cm": 931.78439, "fy_2025_ebitda": 234.89736}, {"name": "E-Com European Union", "segment": "E-Commerce", "geography": "European Union", "march_2025_rev": 0, "march_2025_gross": 0, "march_2025_net": 0, "march_2025_disc": 0, "march_2025_returns": 0, "march_2025_gm": 0, "march_2025_cm": 0, "march_2025_ebitda": -1.45627, "march_2026_rev": 41.81981, "march_2026_gross": 48.783989999999996, "march_2026_net": 41.10997, "march_2026_disc": -7.6740200000000005, "march_2026_returns": 0, "march_2026_gm": 26.59135, "march_2026_cm": 26.305919999999997, "march_2026_ebitda": 24.871659999999995, "q1_2025_rev": 0, "q1_2025_gross": 0, "q1_2025_net": 0, "q1_2025_disc": 0, "q1_2025_returns": 0, "q1_2025_gm": 0, "q1_2025_cm": 0, "q1_2025_ebitda": -1.45627, "q1_2026_rev": 118.78453999999999, "q1_2026_gross": 130.28204, "q1_2026_net": 116.51326, "q1_2026_disc": -13.19239, "q1_2026_returns": -0.5763900000000001, "q1_2026_gm": 76.10873000000001, "q1_2026_cm": 75.38783000000001, "q1_2026_ebitda": 68.2306, "ytd_2025_rev": 0, "ytd_2025_gross": 0, "ytd_2025_net": 0, "ytd_2025_disc": 0, "ytd_2025_returns": 0, "ytd_2025_gm": 0, "ytd_2025_cm": 0, "ytd_2025_ebitda": -1.45627, "ytd_2026_rev": 118.78453999999999, "ytd_2026_gross": 130.28204, "ytd_2026_net": 116.51326, "ytd_2026_disc": -13.19239, "ytd_2026_returns": -0.5763900000000001, "ytd_2026_gm": 76.10873000000001, "ytd_2026_cm": 75.38783000000001, "ytd_2026_ebitda": 68.2306, "fy_2025_rev": 164.75375, "fy_2025_gross": 213.33039, "fy_2025_net": 161.76314, "fy_2025_disc": -51.596509999999995, "fy_2025_returns": -0.011699999999999999, "fy_2025_gm": 94.91076999999999, "fy_2025_cm": 94.91076999999999, "fy_2025_ebitda": 78.68292999999998}, {"name": "Wholesale Amazon", "segment": "Wholesale", "geography": "United States", "march_2025_rev": 0, "march_2025_gross": 0, "march_2025_net": 0, "march_2025_disc": 0, "march_2025_returns": 0, "march_2025_gm": 0, "march_2025_cm": 0, "march_2025_ebitda": 0, "march_2026_rev": 167.11136, "march_2026_gross": 174.261, "march_2026_net": 167.11136, "march_2026_disc": -7.149640000000001, "march_2026_returns": 0, "march_2026_gm": 61.61547999999999, "march_2026_cm": 58.65888999999999, "march_2026_ebitda": 58.65888999999999, "q1_2025_rev": 0, "q1_2025_gross": 0, "q1_2025_net": 0, "q1_2025_disc": 0, "q1_2025_returns": 0, "q1_2025_gm": 0, "q1_2025_cm": 0, "q1_2025_ebitda": 0, "q1_2026_rev": 167.11136, "q1_2026_gross": 174.261, "q1_2026_net": 167.11136, "q1_2026_disc": -7.149640000000001, "q1_2026_returns": 0, "q1_2026_gm": 61.61547999999999, "q1_2026_cm": 58.65888999999999, "q1_2026_ebitda": 58.65888999999999, "ytd_2025_rev": 0, "ytd_2025_gross": 0, "ytd_2025_net": 0, "ytd_2025_disc": 0, "ytd_2025_returns": 0, "ytd_2025_gm": 0, "ytd_2025_cm": 0, "ytd_2025_ebitda": 0, "ytd_2026_rev": 167.11136, "ytd_2026_gross": 174.261, "ytd_2026_net": 167.11136, "ytd_2026_disc": -7.149640000000001, "ytd_2026_returns": 0, "ytd_2026_gm": 61.61547999999999, "ytd_2026_cm": 58.65888999999999, "ytd_2026_ebitda": 58.65888999999999, "fy_2025_rev": 0, "fy_2025_gross": 0, "fy_2025_net": 0, "fy_2025_disc": 0, "fy_2025_returns": 0, "fy_2025_gm": 0, "fy_2025_cm": 0, "fy_2025_ebitda": 0}, {"name": "Wholesale SSense", "segment": "Wholesale", "geography": "Canada", "march_2025_rev": 2.32046, "march_2025_gross": 5.92145, "march_2025_net": 2.32046, "march_2025_disc": -3.60099, "march_2025_returns": 0, "march_2025_gm": 1.3825800000000001, "march_2025_cm": 1.3825800000000001, "march_2025_ebitda": 1.40118, "march_2026_rev": 0, "march_2026_gross": 0, "march_2026_net": 0, "march_2026_disc": 0, "march_2026_returns": 0, "march_2026_gm": 0, "march_2026_cm": 0, "march_2026_ebitda": 0, "q1_2025_rev": 10.35414, "q1_2025_gross": 26.55116, "q1_2025_net": 10.35414, "q1_2025_disc": -16.197020000000002, "q1_2025_returns": 0, "q1_2025_gm": 5.982519999999998, "q1_2025_cm": 5.982519999999998, "q1_2025_ebitda": 6.0011199999999985, "q1_2026_rev": 0, "q1_2026_gross": 0, "q1_2026_net": 0, "q1_2026_disc": 0, "q1_2026_returns": 0, "q1_2026_gm": 0, "q1_2026_cm": 0, "q1_2026_ebitda": 0, "ytd_2025_rev": 10.35414, "ytd_2025_gross": 26.55116, "ytd_2025_net": 10.35414, "ytd_2025_disc": -16.197020000000002, "ytd_2025_returns": 0, "ytd_2025_gm": 5.982519999999998, "ytd_2025_cm": 5.982519999999998, "ytd_2025_ebitda": 6.0011199999999985, "ytd_2026_rev": 0, "ytd_2026_gross": 0, "ytd_2026_net": 0, "ytd_2026_disc": 0, "ytd_2026_returns": 0, "ytd_2026_gm": 0, "ytd_2026_cm": 0, "ytd_2026_ebitda": 0, "fy_2025_rev": 10.35414, "fy_2025_gross": 26.55116, "fy_2025_net": 10.35414, "fy_2025_disc": -16.197020000000002, "fy_2025_returns": 0, "fy_2025_gm": 5.775069999999999, "fy_2025_cm": 5.775069999999999, "fy_2025_ebitda": 6.261169999999998}, {"name": "Wholesale Corp Canada", "segment": "Wholesale", "geography": "Canada", "march_2025_rev": 29.656980000000004, "march_2025_gross": 40.87389, "march_2025_net": 29.656980000000004, "march_2025_disc": -11.21691, "march_2025_returns": 0, "march_2025_gm": 20.158660000000005, "march_2025_cm": 19.913890000000006, "march_2025_ebitda": 19.890630000000005, "march_2026_rev": 5.273680000000001, "march_2026_gross": 7.32299, "march_2026_net": 5.273680000000001, "march_2026_disc": -2.0493099999999997, "march_2026_returns": 0, "march_2026_gm": 3.1355700000000004, "march_2026_cm": 3.1355700000000004, "march_2026_ebitda": 4.02505, "q1_2025_rev": 84.77092, "q1_2025_gross": 118.22814, "q1_2025_net": 84.68331, "q1_2025_disc": -32.37663, "q1_2025_returns": -1.1682000000000001, "q1_2025_gm": 54.147690000000004, "q1_2025_cm": 52.78555, "q1_2025_ebitda": 52.916850000000004, "q1_2026_rev": 316.30400000000003, "q1_2026_gross": 488.23694000000006, "q1_2026_net": 316.30400000000003, "q1_2026_disc": -171.93294, "q1_2026_returns": 0, "q1_2026_gm": 174.35450000000006, "q1_2026_cm": 171.82096000000004, "q1_2026_ebitda": 172.34724000000006, "ytd_2025_rev": 84.77092, "ytd_2025_gross": 118.22814, "ytd_2025_net": 84.68331, "ytd_2025_disc": -32.37663, "ytd_2025_returns": -1.1682000000000001, "ytd_2025_gm": 54.147690000000004, "ytd_2025_cm": 52.78555, "ytd_2025_ebitda": 52.916850000000004, "ytd_2026_rev": 316.30400000000003, "ytd_2026_gross": 488.23694000000006, "ytd_2026_net": 316.30400000000003, "ytd_2026_disc": -171.93294, "ytd_2026_returns": 0, "ytd_2026_gm": 174.35450000000006, "ytd_2026_cm": 171.82096000000004, "ytd_2026_ebitda": 172.34724000000006, "fy_2025_rev": 424.44565, "fy_2025_gross": 582.83016, "fy_2025_net": 420.449, "fy_2025_disc": -160.90973, "fy_2025_returns": -1.4714300000000002, "fy_2025_gm": 263.36269999999996, "fy_2025_cm": 251.96913, "fy_2025_ebitda": 255.77652999999998}, {"name": "Wholesale Corp United States", "segment": "Wholesale", "geography": "United States", "march_2025_rev": 66.99318, "march_2025_gross": 95.58458999999999, "march_2025_net": 66.99318, "march_2025_disc": -28.59141, "march_2025_returns": 0, "march_2025_gm": 45.02274, "march_2025_cm": 43.74774, "march_2025_ebitda": 43.57274, "march_2026_rev": 146.26194999999998, "march_2026_gross": 406.92939, "march_2026_net": 146.26194999999998, "march_2026_disc": -259.79009, "march_2026_returns": -0.8773500000000001, "march_2026_gm": 84.06738999999999, "march_2026_cm": 84.25899999999999, "march_2026_ebitda": 84.25899999999999, "q1_2025_rev": 180.78984999999997, "q1_2025_gross": 932.00014, "q1_2025_net": 177.47672999999998, "q1_2025_disc": -754.27341, "q1_2025_returns": -0.25, "q1_2025_gm": -86.79595000000003, "q1_2025_cm": -89.56539000000004, "q1_2025_ebitda": -90.17939000000001, "q1_2026_rev": 191.36373999999998, "q1_2026_gross": 455.9332, "q1_2026_net": 191.36373999999998, "q1_2026_disc": -263.69211, "q1_2026_returns": -0.8773500000000001, "q1_2026_gm": 98.49131999999999, "q1_2026_cm": 97.14131999999998, "q1_2026_ebitda": 97.14131999999998, "ytd_2025_rev": 180.78984999999997, "ytd_2025_gross": 932.00014, "ytd_2025_net": 177.47672999999998, "ytd_2025_disc": -754.27341, "ytd_2025_returns": -0.25, "ytd_2025_gm": -86.79595000000003, "ytd_2025_cm": -89.56539000000004, "ytd_2025_ebitda": -90.17939000000001, "ytd_2026_rev": 191.36373999999998, "ytd_2026_gross": 455.9332, "ytd_2026_net": 191.36373999999998, "ytd_2026_disc": -263.69211, "ytd_2026_returns": -0.8773500000000001, "ytd_2026_gm": 98.49131999999999, "ytd_2026_cm": 97.14131999999998, "ytd_2026_ebitda": 97.14131999999998, "fy_2025_rev": 1121.9415599999998, "fy_2025_gross": 4058.2234599999997, "fy_2025_net": 1118.6284399999997, "fy_2025_disc": -2937.3500200000003, "fy_2025_returns": -2.245, "fy_2025_gm": -62.475530000000255, "fy_2025_cm": -79.50916000000025, "fy_2025_ebitda": -81.67599000000024}, {"name": "Wholesale Selfridges", "segment": "Wholesale", "geography": "United Kingdom", "march_2025_rev": 0, "march_2025_gross": 0, "march_2025_net": 0, "march_2025_disc": 0, "march_2025_returns": 0, "march_2025_gm": 0, "march_2025_cm": 0, "march_2025_ebitda": 0, "march_2026_rev": 5.05505, "march_2026_gross": 14.15415, "march_2026_net": 5.05505, "march_2026_disc": -9.0991, "march_2026_returns": 0, "march_2026_gm": 2.8594199999999996, "march_2026_cm": 2.8594199999999996, "march_2026_ebitda": 2.8594199999999996, "q1_2025_rev": 0, "q1_2025_gross": 0, "q1_2025_net": 0, "q1_2025_disc": 0, "q1_2025_returns": 0, "q1_2025_gm": 0, "q1_2025_cm": 0, "q1_2025_ebitda": 0, "q1_2026_rev": 3.2836299999999996, "q1_2026_gross": 12.54572, "q1_2026_net": 3.2836299999999996, "q1_2026_disc": -8.80572, "q1_2026_returns": -0.45637, "q1_2026_gm": 1.1536699999999995, "q1_2026_cm": 1.1536699999999995, "q1_2026_ebitda": 1.1955399999999994, "ytd_2025_rev": 0, "ytd_2025_gross": 0, "ytd_2025_net": 0, "ytd_2025_disc": 0, "ytd_2025_returns": 0, "ytd_2025_gm": 0, "ytd_2025_cm": 0, "ytd_2025_ebitda": 0, "ytd_2026_rev": 3.2836299999999996, "ytd_2026_gross": 12.54572, "ytd_2026_net": 3.2836299999999996, "ytd_2026_disc": -8.80572, "ytd_2026_returns": -0.45637, "ytd_2026_gm": 1.1536699999999995, "ytd_2026_cm": 1.1536699999999995, "ytd_2026_ebitda": 1.1955399999999994, "fy_2025_rev": 94.47952, "fy_2025_gross": 264.5421, "fy_2025_net": 94.47952, "fy_2025_disc": -170.06258, "fy_2025_returns": 0, "fy_2025_gm": 53.5366, "fy_2025_cm": 53.5366, "fy_2025_ebitda": -3.498999999999998}, {"name": "Retail Kitsilano", "segment": "Retail", "geography": "Canada", "march_2025_rev": 109.78459000000002, "march_2025_gross": 129.61402, "march_2025_net": 109.78459000000002, "march_2025_disc": -8.69464, "march_2025_returns": -11.13479, "march_2025_gm": 77.83122000000003, "march_2025_cm": 75.50000000000003, "march_2025_ebitda": 30.33544000000003, "march_2026_rev": 120.44393, "march_2026_gross": 158.85614999999999, "march_2026_net": 117.90776, "march_2026_disc": -23.15937, "march_2026_returns": -17.78902, "march_2026_gm": 85.29754999999999, "march_2026_cm": 85.29754999999999, "march_2026_ebitda": 40.11607999999999, "q1_2025_rev": 293.97222, "q1_2025_gross": 359.19102, "q1_2025_net": 293.97222, "q1_2025_disc": -32.62755, "q1_2025_returns": -32.59125, "q1_2025_gm": 202.80281000000002, "q1_2025_cm": 196.97624000000005, "q1_2025_ebitda": 60.920180000000045, "q1_2026_rev": 326.06994999999995, "q1_2026_gross": 420.79512, "q1_2026_net": 319.56075999999996, "q1_2026_disc": -52.14909, "q1_2026_returns": -49.08527, "q1_2026_gm": 223.90175999999997, "q1_2026_cm": 223.90175999999997, "q1_2026_ebitda": 79.18028999999996, "ytd_2025_rev": 293.97222, "ytd_2025_gross": 359.19102, "ytd_2025_net": 293.97222, "ytd_2025_disc": -32.62755, "ytd_2025_returns": -32.59125, "ytd_2025_gm": 202.80281000000002, "ytd_2025_cm": 196.97624000000005, "ytd_2025_ebitda": 60.920180000000045, "ytd_2026_rev": 326.06994999999995, "ytd_2026_gross": 420.79512, "ytd_2026_net": 319.56075999999996, "ytd_2026_disc": -52.14909, "ytd_2026_returns": -49.08527, "ytd_2026_gm": 223.90175999999997, "ytd_2026_cm": 223.90175999999997, "ytd_2026_ebitda": 79.18028999999996, "fy_2025_rev": 1512.04778, "fy_2025_gross": 1850.6641, "fy_2025_net": 1496.14625, "fy_2025_disc": -173.22041, "fy_2025_returns": -182.88905, "fy_2025_gm": 1053.0680900000002, "fy_2025_cm": 1031.06635, "fy_2025_ebitda": 377.4487300000001}, {"name": "Retail Ossington", "segment": "Retail", "geography": "Canada", "march_2025_rev": 108.07729, "march_2025_gross": 128.96053, "march_2025_net": 108.07729, "march_2025_disc": -12.200520000000001, "march_2025_returns": -8.68272, "march_2025_gm": 75.18557000000001, "march_2025_cm": 73.17559000000001, "march_2025_ebitda": 36.163080000000015, "march_2026_rev": 121.25017000000001, "march_2026_gross": 151.0541, "march_2026_net": 118.55394000000001, "march_2026_disc": -18.59277, "march_2026_returns": -13.90739, "march_2026_gm": 85.63603, "march_2026_cm": 83.61380000000001, "march_2026_ebitda": 41.96209000000002, "q1_2025_rev": 278.21199, "q1_2025_gross": 345.91560000000004, "q1_2025_net": 278.21199, "q1_2025_disc": -35.23458, "q1_2025_returns": -32.46903, "q1_2025_gm": 189.37201000000002, "q1_2025_cm": 181.67404, "q1_2025_ebitda": 80.71903, "q1_2026_rev": 331.71066, "q1_2026_gross": 411.46977000000004, "q1_2026_net": 325.88267, "q1_2026_disc": -45.62938, "q1_2026_returns": -39.95772, "q1_2026_gm": 225.14837, "q1_2026_cm": 219.26469000000003, "q1_2026_ebitda": 103.71186000000003, "ytd_2025_rev": 278.21199, "ytd_2025_gross": 345.91560000000004, "ytd_2025_net": 278.21199, "ytd_2025_disc": -35.23458, "ytd_2025_returns": -32.46903, "ytd_2025_gm": 189.37201000000002, "ytd_2025_cm": 181.67404, "ytd_2025_ebitda": 80.71903, "ytd_2026_rev": 331.71066, "ytd_2026_gross": 411.46977000000004, "ytd_2026_net": 325.88267, "ytd_2026_disc": -45.62938, "ytd_2026_returns": -39.95772, "ytd_2026_gm": 225.14837, "ytd_2026_cm": 219.26469000000003, "ytd_2026_ebitda": 103.71186000000003, "fy_2025_rev": 1483.6978, "fy_2025_gross": 1800.73028, "fy_2025_net": 1472.99202, "fy_2025_disc": -183.93348, "fy_2025_returns": -144.89127, "fy_2025_gm": 1024.84158, "fy_2025_cm": 983.3315599999999, "fy_2025_ebitda": 503.8424199999999}, {"name": "Retail West Loop", "segment": "Retail", "geography": "United States", "march_2025_rev": 0, "march_2025_gross": 0, "march_2025_net": 0, "march_2025_disc": 0, "march_2025_returns": 0, "march_2025_gm": 0, "march_2025_cm": 0, "march_2025_ebitda": 0, "march_2026_rev": 39.91385, "march_2026_gross": 52.82879, "march_2026_net": 39.384029999999996, "march_2026_disc": -6.9440100000000005, "march_2026_returns": -6.50075, "march_2026_gm": 22.838189999999997, "march_2026_cm": 21.02819, "march_2026_ebitda": -19.871450000000006, "q1_2025_rev": 0, "q1_2025_gross": 0, "q1_2025_net": 0, "q1_2025_disc": 0, "q1_2025_returns": 0, "q1_2025_gm": 0, "q1_2025_cm": 0, "q1_2025_ebitda": -5.78332, "q1_2026_rev": 115.72146000000001, "q1_2026_gross": 144.16007, "q1_2026_net": 114.60164, "q1_2026_disc": -15.97518, "q1_2026_returns": -13.58325, "q1_2026_gm": 66.91112000000001, "q1_2026_cm": 58.25112, "q1_2026_ebitda": -74.06809999999999, "ytd_2025_rev": 0, "ytd_2025_gross": 0, "ytd_2025_net": 0, "ytd_2025_disc": 0, "ytd_2025_returns": 0, "ytd_2025_gm": 0, "ytd_2025_cm": 0, "ytd_2025_ebitda": -5.78332, "ytd_2026_rev": 115.72146000000001, "ytd_2026_gross": 144.16007, "ytd_2026_net": 114.60164, "ytd_2026_disc": -15.97518, "ytd_2026_returns": -13.58325, "ytd_2026_gm": 66.91112000000001, "ytd_2026_cm": 58.25112, "ytd_2026_ebitda": -74.06809999999999, "fy_2025_rev": 180.14181000000002, "fy_2025_gross": 220.98822, "fy_2025_net": 179.46181, "fy_2025_disc": -23.59866, "fy_2025_returns": -17.92775, "fy_2025_gm": 106.67956000000002, "fy_2025_cm": 94.97258000000002, "fy_2025_ebitda": -493.73939999999993}, {"name": "Retail Newbury", "segment": "Retail", "geography": "United States", "march_2025_rev": 0, "march_2025_gross": 0, "march_2025_net": 0, "march_2025_disc": 0, "march_2025_returns": 0, "march_2025_gm": 0, "march_2025_cm": 0, "march_2025_ebitda": 0, "march_2026_rev": 53.251599999999996, "march_2026_gross": 68.15758, "march_2026_net": 52.05432999999999, "march_2026_disc": -8.1565, "march_2026_returns": -7.94675, "march_2026_gm": 35.94055, "march_2026_cm": 32.75555, "march_2026_ebitda": -30.183840000000004, "q1_2025_rev": 0, "q1_2025_gross": 0, "q1_2025_net": 0, "q1_2025_disc": 0, "q1_2025_returns": 0, "q1_2025_gm": 0, "q1_2025_cm": 0, "q1_2025_ebitda": 0, "q1_2026_rev": 122.6688, "q1_2026_gross": 148.08348999999998, "q1_2026_net": 121.38252, "q1_2026_disc": -14.49122, "q1_2026_returns": -12.20975, "q1_2026_gm": 78.03146000000001, "q1_2026_cm": 68.44646, "q1_2026_ebitda": -121.44023999999999, "ytd_2025_rev": 0, "ytd_2025_gross": 0, "ytd_2025_net": 0, "ytd_2025_disc": 0, "ytd_2025_returns": 0, "ytd_2025_gm": 0, "ytd_2025_cm": 0, "ytd_2025_ebitda": 0, "ytd_2026_rev": 122.6688, "ytd_2026_gross": 148.08348999999998, "ytd_2026_net": 121.38252, "ytd_2026_disc": -14.49122, "ytd_2026_returns": -12.20975, "ytd_2026_gm": 78.03146000000001, "ytd_2026_cm": 68.44646, "ytd_2026_ebitda": -121.44023999999999, "fy_2025_rev": 201.41909, "fy_2025_gross": 243.75218, "fy_2025_net": 200.47962, "fy_2025_disc": -27.71506, "fy_2025_returns": -15.5575, "fy_2025_gm": 128.48036000000002, "fy_2025_cm": 109.73036, "fy_2025_ebitda": -852.4505899999999}, {"name": "Retail Mercer", "segment": "Retail", "geography": "United States", "march_2025_rev": 0, "march_2025_gross": 0, "march_2025_net": 0, "march_2025_disc": 0, "march_2025_returns": 0, "march_2025_gm": 0, "march_2025_cm": 0, "march_2025_ebitda": 0, "march_2026_rev": 85.15690999999998, "march_2026_gross": 102.60537, "march_2026_net": 84.10378999999999, "march_2026_disc": -11.38183, "march_2026_returns": -7.11975, "march_2026_gm": 53.71870999999999, "march_2026_cm": 47.188709999999986, "march_2026_ebitda": -86.52701000000002, "q1_2025_rev": 0, "q1_2025_gross": 0, "q1_2025_net": 0, "q1_2025_disc": 0, "q1_2025_returns": 0, "q1_2025_gm": 0, "q1_2025_cm": 0, "q1_2025_ebitda": 0, "q1_2026_rev": 197.77953999999997, "q1_2026_gross": 231.38567, "q1_2026_net": 196.17729999999997, "q1_2026_disc": -20.01837, "q1_2026_returns": -15.19, "q1_2026_gm": 125.37442999999999, "q1_2026_cm": 108.89442999999999, "q1_2026_ebitda": -300.47997000000004, "ytd_2025_rev": 0, "ytd_2025_gross": 0, "ytd_2025_net": 0, "ytd_2025_disc": 0, "ytd_2025_returns": 0, "ytd_2025_gm": 0, "ytd_2025_cm": 0, "ytd_2025_ebitda": 0, "ytd_2026_rev": 197.77953999999997, "ytd_2026_gross": 231.38567, "ytd_2026_net": 196.17729999999997, "ytd_2026_disc": -20.01837, "ytd_2026_returns": -15.19, "ytd_2026_gm": 125.37442999999999, "ytd_2026_cm": 108.89442999999999, "ytd_2026_ebitda": -300.47997000000004, "fy_2025_rev": 230.96672, "fy_2025_gross": 289.88822, "fy_2025_net": 230.39191, "fy_2025_disc": -40.40556, "fy_2025_returns": -19.09075, "fy_2025_gm": 142.95516, "fy_2025_cm": 119.27016000000002, "fy_2025_ebitda": -1752.0099300000002}, {"name": "Retail Georgetown", "segment": "Retail", "geography": "United States", "march_2025_rev": 0, "march_2025_gross": 0, "march_2025_net": 0, "march_2025_disc": 0, "march_2025_returns": 0, "march_2025_gm": 0, "march_2025_cm": 0, "march_2025_ebitda": 0, "march_2026_rev": 53.10488000000001, "march_2026_gross": 63.22429, "march_2026_net": 50.79968000000001, "march_2026_disc": -10.16186, "march_2026_returns": -2.26275, "march_2026_gm": 34.50811, "march_2026_cm": 32.248110000000004, "march_2026_ebitda": -30.17879, "q1_2025_rev": 0, "q1_2025_gross": 0, "q1_2025_net": 0, "q1_2025_disc": 0, "q1_2025_returns": 0, "q1_2025_gm": 0, "q1_2025_cm": 0, "q1_2025_ebitda": 0, "q1_2026_rev": 128.28196000000003, "q1_2026_gross": 154.13637, "q1_2026_net": 125.72906, "q1_2026_disc": -19.34756, "q1_2026_returns": -9.059750000000001, "q1_2026_gm": 82.10356, "q1_2026_cm": 72.91856000000001, "q1_2026_ebitda": -113.56318999999999, "ytd_2025_rev": 0, "ytd_2025_gross": 0, "ytd_2025_net": 0, "ytd_2025_disc": 0, "ytd_2025_returns": 0, "ytd_2025_gm": 0, "ytd_2025_cm": 0, "ytd_2025_ebitda": 0, "ytd_2026_rev": 128.28196000000003, "ytd_2026_gross": 154.13637, "ytd_2026_net": 125.72906, "ytd_2026_disc": -19.34756, "ytd_2026_returns": -9.059750000000001, "ytd_2026_gm": 82.10356, "ytd_2026_cm": 72.91856000000001, "ytd_2026_ebitda": -113.56318999999999, "fy_2025_rev": 122.35355000000001, "fy_2025_gross": 155.5331, "fy_2025_net": 122.31845000000001, "fy_2025_disc": -24.970399999999998, "fy_2025_returns": -8.244250000000001, "fy_2025_gm": 77.66027, "fy_2025_cm": 69.43527, "fy_2025_ebitda": -392.80711}, {"name": "Retail Abbot Kinney", "segment": "Retail", "geography": "United States", "march_2025_rev": 0, "march_2025_gross": 0, "march_2025_net": 0, "march_2025_disc": 0, "march_2025_returns": 0, "march_2025_gm": 0, "march_2025_cm": 0, "march_2025_ebitda": -0.97434, "march_2026_rev": 57.33896000000001, "march_2026_gross": 70.93929, "march_2026_net": 55.896170000000005, "march_2026_disc": -7.86787, "march_2026_returns": -7.17525, "march_2026_gm": 38.91322000000001, "march_2026_cm": 36.18722000000001, "march_2026_ebitda": -31.252120000000005, "q1_2025_rev": 0, "q1_2025_gross": 0, "q1_2025_net": 0, "q1_2025_disc": 0, "q1_2025_returns": 0, "q1_2025_gm": 0, "q1_2025_cm": 0, "q1_2025_ebitda": -0.97434, "q1_2026_rev": 159.89053, "q1_2026_gross": 193.04838, "q1_2026_net": 158.4568, "q1_2026_disc": -15.78458, "q1_2026_returns": -18.807000000000002, "q1_2026_gm": 107.99173, "q1_2026_cm": 99.55973, "q1_2026_ebitda": -95.43100000000004, "ytd_2025_rev": 0, "ytd_2025_gross": 0, "ytd_2025_net": 0, "ytd_2025_disc": 0, "ytd_2025_returns": 0, "ytd_2025_gm": 0, "ytd_2025_cm": 0, "ytd_2025_ebitda": -0.97434, "ytd_2026_rev": 159.89053, "ytd_2026_gross": 193.04838, "ytd_2026_net": 158.4568, "ytd_2026_disc": -15.78458, "ytd_2026_returns": -18.807000000000002, "ytd_2026_gm": 107.99173, "ytd_2026_cm": 99.55973, "ytd_2026_ebitda": -95.43100000000004, "fy_2025_rev": 187.96496000000005, "fy_2025_gross": 234.80725, "fy_2025_net": 186.91736000000003, "fy_2025_disc": -28.54789, "fy_2025_returns": -19.342, "fy_2025_gm": 119.15326000000003, "fy_2025_cm": 103.97021000000004, "fy_2025_ebitda": -381.04015999999996}, {"name": "Postcard West Loop", "segment": "Postcard", "geography": "United States", "march_2025_rev": 0, "march_2025_gross": 0, "march_2025_net": 0, "march_2025_disc": 0, "march_2025_returns": 0, "march_2025_gm": 0, "march_2025_cm": 0, "march_2025_ebitda": 0, "march_2026_rev": 40.03143, "march_2026_gross": 40.89145, "march_2026_net": 40.03143, "march_2026_disc": -0.86002, "march_2026_returns": 0, "march_2026_gm": 29.29253, "march_2026_cm": 29.29253, "march_2026_ebitda": 0, "q1_2025_rev": 0, "q1_2025_gross": 0, "q1_2025_net": 0, "q1_2025_disc": 0, "q1_2025_returns": 0, "q1_2025_gm": 0, "q1_2025_cm": 0, "q1_2025_ebitda": 0, "q1_2026_rev": 119.91632, "q1_2026_gross": 122.4916, "q1_2026_net": 119.91632, "q1_2026_disc": -2.5752800000000002, "q1_2026_returns": 0, "q1_2026_gm": 81.66785, "q1_2026_cm": 81.66785, "q1_2026_ebitda": -28.782020000000006, "ytd_2025_rev": 0, "ytd_2025_gross": 0, "ytd_2025_net": 0, "ytd_2025_disc": 0, "ytd_2025_returns": 0, "ytd_2025_gm": 0, "ytd_2025_cm": 0, "ytd_2025_ebitda": 0, "ytd_2026_rev": 119.91632, "ytd_2026_gross": 122.4916, "ytd_2026_net": 119.91632, "ytd_2026_disc": -2.5752800000000002, "ytd_2026_returns": 0, "ytd_2026_gm": 81.66785, "ytd_2026_cm": 81.66785, "ytd_2026_ebitda": -28.782020000000006, "fy_2025_rev": 150.11135000000002, "fy_2025_gross": 156.01383, "fy_2025_net": 150.11135000000002, "fy_2025_disc": -5.90248, "fy_2025_returns": 0, "fy_2025_gm": 91.3745, "fy_2025_cm": 89.8745, "fy_2025_ebitda": -273.94948}, {"name": "Corporate United States", "segment": "Corporate", "geography": "United States", "march_2025_rev": 0, "march_2025_gross": 0, "march_2025_net": 0, "march_2025_disc": 0, "march_2025_returns": 0, "march_2025_gm": 0, "march_2025_cm": 0, "march_2025_ebitda": 1343.01938, "march_2026_rev": 0, "march_2026_gross": 0, "march_2026_net": 0, "march_2026_disc": 0, "march_2026_returns": 0, "march_2026_gm": 0, "march_2026_cm": 0, "march_2026_ebitda": -64.32941, "q1_2025_rev": 0.415, "q1_2025_gross": 0.415, "q1_2025_net": 0.415, "q1_2025_disc": 0, "q1_2025_returns": 0, "q1_2025_gm": 0.415, "q1_2025_cm": 0.415, "q1_2025_ebitda": 1140.65197, "q1_2026_rev": 19.55, "q1_2026_gross": 19.55, "q1_2026_net": 19.55, "q1_2026_disc": 0, "q1_2026_returns": 0, "q1_2026_gm": -8.004399999999997, "q1_2026_cm": -8.004399999999997, "q1_2026_ebitda": -194.66582, "ytd_2025_rev": 0.415, "ytd_2025_gross": 0.415, "ytd_2025_net": 0.415, "ytd_2025_disc": 0, "ytd_2025_returns": 0, "ytd_2025_gm": 0.415, "ytd_2025_cm": 0.415, "ytd_2025_ebitda": 1140.65197, "ytd_2026_rev": 19.55, "ytd_2026_gross": 19.55, "ytd_2026_net": 19.55, "ytd_2026_disc": 0, "ytd_2026_returns": 0, "ytd_2026_gm": -8.004399999999997, "ytd_2026_cm": -8.004399999999997, "ytd_2026_ebitda": -194.66582, "fy_2025_rev": 2.21385, "fy_2025_gross": 2.18885, "fy_2025_net": 2.21385, "fy_2025_disc": 0, "fy_2025_returns": 0.025, "fy_2025_gm": -53.520540000000004, "fy_2025_cm": -53.520540000000004, "fy_2025_ebitda": 6406.127300000001}, {"name": "Corporate Canada", "segment": "Corporate", "geography": "Canada", "march_2025_rev": 6.8, "march_2025_gross": 6.8, "march_2025_net": 6.8, "march_2025_disc": 0, "march_2025_returns": 0, "march_2025_gm": 2.48072, "march_2025_cm": 0.7037199999999999, "march_2025_ebitda": -3259.31626, "march_2026_rev": 98.44371, "march_2026_gross": 100.66325, "march_2026_net": 98.44371, "march_2026_disc": -2.05768, "march_2026_returns": -0.16186, "march_2026_gm": 51.86991999999999, "march_2026_cm": 51.86991999999999, "march_2026_ebitda": -535.4581, "q1_2025_rev": 6.800009999999999, "q1_2025_gross": 7.265, "q1_2025_net": 6.800009999999999, "q1_2025_disc": -0.46499, "q1_2025_returns": 0, "q1_2025_gm": 2.48073, "q1_2025_cm": -4.21211, "q1_2025_ebitda": -6333.19592, "q1_2026_rev": 101.83627, "q1_2026_gross": 104.14226000000001, "q1_2026_net": 101.83627, "q1_2026_disc": -2.14413, "q1_2026_returns": -0.16186, "q1_2026_gm": 53.599219999999995, "q1_2026_cm": 53.599219999999995, "q1_2026_ebitda": -2170.5202099999997, "ytd_2025_rev": 6.800009999999999, "ytd_2025_gross": 7.265, "ytd_2025_net": 6.800009999999999, "ytd_2025_disc": -0.46499, "ytd_2025_returns": 0, "ytd_2025_gm": 2.48073, "ytd_2025_cm": -4.21211, "ytd_2025_ebitda": -6333.19592, "ytd_2026_rev": 101.83627, "ytd_2026_gross": 104.14226000000001, "ytd_2026_net": 101.83627, "ytd_2026_disc": -2.14413, "ytd_2026_returns": -0.16186, "ytd_2026_gm": 53.599219999999995, "ytd_2026_cm": 53.599219999999995, "ytd_2026_ebitda": -2170.5202099999997, "fy_2025_rev": 118.92482999999999, "fy_2025_gross": 121.48612999999999, "fy_2025_net": 118.92482999999999, "fy_2025_disc": -2.1863, "fy_2025_returns": -0.375, "fy_2025_gm": 37.430579999999985, "fy_2025_cm": 28.961299999999987, "fy_2025_ebitda": -22741.15624}], "labels": ["Jan 2025", "Feb 2025", "Mar 2025", "Apr 2025", "May 2025", "Jun 2025", "Jul 2025", "Aug 2025", "Sep 2025", "Oct 2025", "Nov 2025", "Dec 2025", "Jan 2026", "Feb 2026", "Mar 2026"], "monthly": {"rev": [5344.380309999931, 6663.944309999975, 5839.780569999993, 5480.54385000001, 5353.419790000001, 5326.200189999993, 6739.176849999999, 4880.788419999999, 5137.162719999998, 4651.174419999999, 12865.33738, 10118.1196, 5393.036320000001, 4933.194340000001, 6645.472650000001], "cogs": [1766.8521300000157, 2033.9562400000036, 1743.8247900000101, 1926.9697099999944, 1544.2059800000002, 1703.9156799999992, 2282.6654400000007, 1676.29086, 1721.46629, 1652.14004, 4823.66771, 3728.267399999998, 1779.4114100000002, 1814.34442, 2582.22964], "gm": [3507.002609999916, 4476.380149999972, 3902.3376999999828, 3408.3220300000157, 3588.0973800000006, 3472.178979999994, 4421.532499999998, 3087.179749999999, 3221.234049999998, 2870.507179999999, 7985.521420000001, 5284.9774000000025, 3533.434710000001, 3026.163270000001, 3971.0574000000006], "down": [931.1748599999999, 1682.81543, 1143.8780100000001, 954.15545, 889.40021, 1117.84128, 1117.20239, 949.9544400000001, 805.13933, 695.7199, 1005.27962, 1772.60921, 1106.69429, 888.2222899999999, 827.56942], "cm": [2575.827749999916, 2793.5647199999717, 2758.4596899999824, 2454.1665800000155, 2698.6971700000004, 2354.337699999994, 3304.3301099999985, 2137.225309999999, 2416.0947199999982, 2174.787279999999, 6980.241800000001, 3512.3681900000024, 2426.740420000001, 2137.940980000001, 3143.487980000001], "perfad": [2028.97795, 2676.9253099999996, 2368.66579, 1941.5711300000003, 1903.99478, 1758.34647, 1944.0464200000001, 2059.1572699999997, 1598.5620999999999, 1682.92788, 4227.388150000001, 2347.37941, 1559.30049, 1610.0145699999998, 2031.20557], "totad": [2492.05226, 3084.13465, 4033.2862800000003, 2285.90833, 2089.77655, 1989.1383899999998, 2419.47105, 2220.786549999999, 2102.7096399999996, 2210.2594499999996, 4576.608660000002, 2668.8366, 1656.69459, 1790.78731, 2111.4467], "tme": [58.5478, 29.26366, 23.50282, 35.06908, 20.872110000000006, 20.453379999999996, 18.3714, 55.79709, 109.17594, 116.46907000000002, 63.353860000000005, 41.848, 24.216299999999997, 25.93559, 38.96622000000001], "payroll": [738.55838, 653.1238999999999, 647.07543, 658.7289000000002, 885.3819599999999, 783.3504500000003, 545.2077300000001, 497.58310000000006, 519.96033, 549.83727, 594.0546500000002, 1244.7216200000003, 588.3735999999999, 593.18536, 560.26793], "lic": [335.67213999999996, 350.76993, 370.22302999999994, 279.06412, 310.9498899999999, 309.12844, 343.56145, 276.81976000000003, 348.19813, 208.04758, 809.9564399999999, 434.7785500000001, 353.56519000000003, 334.45922, 322.88488], "ps": [173.95920999999998, 185.80646000000002, 207.53748000000004, 208.24157999999997, 221.13516000000004, 175.73521, 181.14615000000003, 175.08738999999997, 124.49728, 239.23873000000003, 185.07389, 168.05835000000002, 112.51534, 133.22399, 124.40592], "ga": [84.91081, 95.98155, 96.36299, 86.23251, 112.11525, 113.39039000000001, -89.09241000000002, 102.72951, 823.2879599999999, 1569.4816899999998, 480.12836, 1143.3550500000001, 384.03806000000003, 362.6717, 368.97219000000007], "opex": [3898.7487, 4399.81903, 5381.22307, 3554.2212800000007, 3647.30707, 3397.30102, 3429.61666, 3342.075739999999, 4076.7004999999995, 4912.12083, 6719.220560000002, 5710.724890000001, 3119.94358, 3240.9536799999996, 3529.69593], "oi": [-1322.9209500000843, -1606.254310000028, -2622.7633800000176, -1100.0546999999851, -948.6098999999995, -1042.9633200000058, -125.28655000000163, -1204.85043, -1660.6057800000012, -2737.3335500000007, 261.0212399999991, -2198.356699999999, -693.2031599999991, -1103.0126999999984, -386.2079499999991], "ebitda": [-1405.9369500000844, -1586.850950000028, -2857.1406400000174, -942.1090099999851, -985.6964099999996, -1047.6125900000059, -150.9210800000016, -1145.30714, -1530.3523400000013, -2690.8828000000008, 331.97720999999916, -2407.2368899999988, -657.044329999999, -1090.5809399999985, -235.56303999999906], "ni": [-1443.3686100000843, -1626.258840000028, -2913.382980000017, -1001.9696599999851, -1070.1789899999997, -1145.749550000006, -231.8224800000016, -1219.3244, -1654.2778100000012, -2828.369370000001, 117.12344999999917, 2029.2851000000005, -872.8789599999991, -1307.4082999999985, -474.21319999999906], "net_rev": [5278.154589999931, 6579.783219999976, 5759.685079999993, 5395.13404000001, 5248.13366, 5218.286659999993, 6620.977169999999, 4759.635469999999, 5057.547559999998, 4532.554039999999, 12730.122440000001, 9939.67323, 5296.083730000001, 4807.415300000001, 6463.8307], "gross_rev": [7262.63668999993, 8091.2290699999585, 6830.353259999993, 5822.26162000001, 6378.2375, 7254.683229999999, 8630.4831, 5543.67902, 5847.754009999999, 5319.344619999998, 18108.775560000002, 13124.96641, 6423.165130000001, 6289.88273, 8477.74846]}, "gm_pct": [65.62037891349017, 67.1731326338168, 66.82336182367872, 62.18948562924115, 67.02439787558674, 65.19054590773837, 65.60938521742457, 63.251661091262775, 62.70453605565368, 61.71575006211011, 62.07005058735584, 52.23280222937869, 65.51846678458861, 61.34287565893868, 59.75583091144014], "cm_pct": [48.196939599905626, 41.92058921932951, 47.23567361709938, 44.7796176286412, 50.410714568677605, 44.202951748233055, 49.031657479058424, 43.78852607587525, 47.03169534797213, 46.757809611448614, 54.2561892768645, 34.71364570547281, 44.997665063008526, 43.337862501480146, 47.30269983129041], "ebitda_pct": [-26.30682826537287, -23.812488162885533, -48.92547940375816, -17.190064267070564, -18.412462475691626, -19.669042706410313, -2.2394586662316427, -23.465617466778042, -29.789835818165432, -57.853835548055, 2.580400343920084, -23.791346467183473, -12.18319868463261, -22.10699325500317, -3.5447146110818624], "monthly_bs": {"cash": [9525.856130000004, 7939.7146999999995, 9213.1875, 7124.53489, 5761.6464399999995, 8786.056030000002, 8160.6286999999975, 6882.12674, 3312.9821800000004, 7722.638489999999, 15440.93893, 12887.178520000007, 11483.63723, 8981.43495, 10047.167370000001], "loc": [4829.76126, 4845.44753, 8385.70321, 8679.01739, 8733.30665, 8770.46167, 8678.79142, 8731.2, 8624.35749, 8582.67801, 8579.08847, 8761.84857, 8807.66267, 8792.17496, 8615.18757], "edc": [0, 0, 0, 0, 0, 0, 0, 0, 0, 5875, 5875, 5875, 5875, 5875, 5875], "inv": [32954.5976, 31864.83556, 30757.391480000002, 29947.364059999996, 29811.046430000002, 29373.411, 28578.152799999996, 29262.087609999995, 27611.06342, 26845.582049999997, 23890.08934, 22247.941179999998, 21835.17683, 20837.47707, 19866.715389999998]}, "fulfil_inventory": {"units_on_hand_current": 500346, "active_skus_current": 897, "warehouse_count": 16, "warehouses": [{"name": "Portside - Burlington, ON", "code": "PSBR", "units": 166493, "skus": 517}, {"name": "Portside - Richmond, BC", "code": "PSRC", "units": 134623, "skus": 656}, {"name": "Stord - TN", "code": "STTN", "units": 71868, "skus": 581}, {"name": "Stord - UT", "code": "STUT", "units": 47066, "skus": 593}, {"name": "Pro FS", "code": "PFS", "units": 32920, "skus": 355}, {"name": "Invenco AU", "code": "INV", "units": 30726, "skus": 405}, {"name": "Softeon - Germany", "code": "SOFG", "units": 9177, "skus": 294}, {"name": "Monos Retail - Toronto, ON", "code": "MRTO", "units": 1554, "skus": 446}, {"name": "Monos Retail - Vancouver, BC", "code": "MRVA", "units": 1258, "skus": 508}, {"name": "Monos Retail - New York, NY", "code": "NEWYORK", "units": 1005, "skus": 484}, {"name": "Monos Retail - Los Angeles, CA", "code": "MRLA", "units": 957, "skus": 271}, {"name": "Monos Retail - Georgetown, DC", "code": "GEORGE", "units": 879, "skus": 330}, {"name": "Monos Retail - Chicago, IL", "code": "CHICA", "units": 876, "skus": 311}, {"name": "Monos Retail - Boston, MA", "code": "BOSTON", "units": 808, "skus": 305}, {"name": "Port of Shanghai", "code": "SHANG", "units": 108, "skus": 4}, {"name": "Fable Warehouse Sale", "code": "FABLE", "units": 28, "skus": 13}], "units_shipped_monthly": [46532, 88193, 53197, 36211, 36613, 52243, 57974, 48195, 37875, 52849, 95687, 84650, 52096, 47065, 51972], "cogs_shipped_usd_monthly": [2480, 3862, 2457, 2054, 1955, 2917, 3171, 2431, 2408, 2692, 4933, 4488, 2710, 2321, 2866], "kpis_by_period": {"march_2026": {"turns": 1.5225338623509448, "dio": 239.73194227444205, "units_shipped": 51972}, "q1_2026": {"turns": 1.173175511425048, "dio": 311.1213935557154, "units_shipped": 151133}, "ytd_2026": {"turns": 1.173175511425048, "dio": 311.1213935557154, "units_shipped": 151133}}, "kpis_prior": {"march_2025": {"turns": 0.6683217275755361, "dio": 546.144147256901, "units_shipped": 53197}, "q1_2025": {"turns": 0.6962122187757042, "dio": 524.2654325169069, "units_shipped": 187922}, "ytd_2025": {"turns": 0.6962122187757042, "dio": 524.2654325169069, "units_shipped": 187922}}}};
 
-// Brand palette
 const C = {
-  ink: '#1a1a1a',
-  inkSoft: '#4a4a4a',
-  inkMuted: '#8a8a8a',
-  accent: '#1a3a3a',
-  accentWarm: '#b8794a',
-  pos: '#2d6a4f',
-  neg: '#9b2c2c',
-  line: '#e6e0d6',
-  bg: '#f5f2ec',
-  highlight: '#f0ebe0',
+  ink: '#1a1a1a', inkSoft: '#4a4a4a', inkMuted: '#8a8a8a',
+  accent: '#1a3a3a', accentWarm: '#b8794a',
+  pos: '#2d6a4f', neg: '#9b2c2c',
+  line: '#e6e0d6', bg: '#f5f2ec',
 };
 
-// Common defaults
-Chart.defaults.font.family = "'Inter Tight', sans-serif";
-Chart.defaults.font.size = 11;
-Chart.defaults.color = C.inkSoft;
-Chart.defaults.borderColor = C.line;
-Chart.defaults.plugins.legend.labels.boxWidth = 12;
-Chart.defaults.plugins.legend.labels.boxHeight = 2;
-Chart.defaults.plugins.legend.labels.padding = 16;
-Chart.defaults.plugins.legend.labels.font = { family: "'Inter Tight', sans-serif", size: 11, weight: '500' };
-
-const tooltipStyle = {
-  backgroundColor: '#1a1a1a',
-  titleColor: '#f5f2ec',
-  bodyColor: '#f5f2ec',
-  titleFont: { family: "'Fraunces', serif", size: 13, weight: '500' },
-  bodyFont: { family: "'JetBrains Mono', monospace", size: 12 },
-  padding: 12,
-  cornerRadius: 0,
-  borderColor: C.accentWarm,
-  borderWidth: 1,
-  displayColors: false,
+// Period view configurations
+const VIEWS = {
+  month: {
+    current: 'march_2026', prior: 'march_2025',
+    label: 'March 2026', priorLabel: 'March 2025',
+    section: 'March in review',
+    note: 'March 2026 vs March 2025',
+    brandSub: 'March 2026',
+    chMeta: 'March 2026',
+    segMix: 'Share of March 2026 revenue',
+  },
+  quarter: {
+    current: 'q1_2026', prior: 'q1_2025',
+    label: 'Q1 2026', priorLabel: 'Q1 2025',
+    section: 'Quarter in review',
+    note: 'Q1 2026 vs Q1 2025',
+    brandSub: 'Quarter One, Fiscal 2026',
+    chMeta: 'Q1 2026',
+    segMix: 'Share of Q1 2026 revenue',
+  },
+  ytd: {
+    current: 'ytd_2026', prior: 'ytd_2025',
+    label: 'YTD 2026', priorLabel: 'YTD 2025',
+    section: 'Year-to-date',
+    note: 'YTD 2026 vs YTD 2025',
+    brandSub: 'Year-to-Date, Fiscal 2026',
+    chMeta: 'YTD 2026 (through March)',
+    segMix: 'Share of YTD 2026 revenue',
+  },
 };
 
-const fmtUSD = (v) => {
+// Formatting helpers
+const fmtMoney = (v) => {
   const sign = v < 0 ? '-' : '';
   const a = Math.abs(v);
   if (a >= 1000) return sign + '$' + (a/1000).toFixed(2) + 'M';
   return sign + '$' + a.toFixed(0) + 'K';
 };
+const fmtPct = (v) => v.toFixed(1) + '%';
+const fmtPctSigned = (v) => (v >= 0 ? '+' : '') + v.toFixed(1) + '%';
+const fmtPP = (v) => (v >= 0 ? '+' : '') + v.toFixed(1) + ' pp';
 
-// 1. Revenue chart - bar
+// Build the KPI grid based on view
+function renderKPIs(viewKey) {
+  const v = VIEWS[viewKey];
+  const cur = DATA.periods[v.current];
+  const pri = DATA.periods[v.prior];
+  const bs = DATA.bs_periods[v.current];
+
+  const rev = cur.rev;
+  const revPrior = pri.rev;
+  const revYoY = revPrior ? (rev - revPrior) / Math.abs(revPrior) * 100 : 0;
+
+  const gmPct = rev ? cur.gm / rev * 100 : 0;
+  const gmPctPrior = revPrior ? pri.gm / revPrior * 100 : 0;
+  const gmPP = gmPct - gmPctPrior;
+
+  const cmPct = rev ? cur.cm / rev * 100 : 0;
+  const cmPctPrior = revPrior ? pri.cm / revPrior * 100 : 0;
+  const cmPP = cmPct - cmPctPrior;
+
+  const ebitda = cur.ebitda;
+  const ebitdaPrior = pri.ebitda;
+  const ebitdaImprovement = ebitda - ebitdaPrior;
+
+  const perfadPct = rev ? cur.perfad / rev * 100 : 0;
+  const perfadPctPrior = revPrior ? pri.perfad / revPrior * 100 : 0;
+
+  const cash = bs.cash;
+  const loc = bs.loc;
+  const edc = bs.edc || 0;
+  const totalDebt = loc + edc;
+  const netCash = cash - totalDebt;
+  const inv = bs.inv;
+
+  // Revenue stack
+  const netRev = cur.net_rev;
+  const netRevPrior = pri.net_rev;
+  const netRevYoY = netRevPrior ? (netRev - netRevPrior) / Math.abs(netRevPrior) * 100 : 0;
+  const grossRev = cur.gross_rev;
+  const grossRevPrior = pri.gross_rev;
+  const grossRevYoY = grossRevPrior ? (grossRev - grossRevPrior) / Math.abs(grossRevPrior) * 100 : 0;
+  const discRate = grossRev ? Math.abs(cur.discounts) / grossRev * 100 : 0;
+  const discRatePrior = grossRevPrior ? Math.abs(pri.discounts) / grossRevPrior * 100 : 0;
+  const retRate = grossRev ? Math.abs(cur.returns) / grossRev * 100 : 0;
+  const retRatePrior = grossRevPrior ? Math.abs(pri.returns) / grossRevPrior * 100 : 0;
+
+  const tiles = [
+    {
+      label: 'Net Revenue', value: fmtMoney(netRev),
+      sub: `vs ${fmtMoney(netRevPrior)} prior <span class="delta ${netRevYoY >= 0 ? 'pos' : 'neg'}">${fmtPctSigned(netRevYoY)}</span>`
+    },
+    {
+      label: 'Gross Margin', value: fmtPct(gmPct),
+      sub: `prior ${fmtPct(gmPctPrior)} <span class="delta ${gmPP >= 0 ? 'pos' : 'neg'}">${fmtPP(gmPP)}</span>`
+    },
+    {
+      label: 'Contribution Margin', value: fmtPct(cmPct),
+      sub: `prior ${fmtPct(cmPctPrior)} <span class="delta ${cmPP >= 0 ? 'pos' : 'neg'}">${fmtPP(cmPP)}</span>`
+    },
+    {
+      label: 'EBITDA', value: fmtMoney(ebitda),
+      sub: `prior ${fmtMoney(ebitdaPrior)} <span class="delta ${ebitdaImprovement >= 0 ? 'pos' : 'neg'}">${fmtMoney(ebitdaImprovement)} improvement</span>`
+    },
+    {
+      label: 'Cash on Hand', value: fmtMoney(cash), small: true,
+      sub: `at period end`
+    },
+    {
+      label: 'Total Debt Drawn', value: fmtMoney(totalDebt), small: true,
+      sub: `RBC LOC ${fmtMoney(loc)} · EDC ${fmtMoney(edc)}`
+    },
+    {
+      label: 'Net Cash Position', value: fmtMoney(netCash), small: true,
+      sub: `cash less total debt`
+    },
+    {
+      label: 'Performance Marketing', value: fmtPct(perfadPct), small: true,
+      sub: `performance ads / total revenue · prior ${fmtPct(perfadPctPrior)}`
+    },
+  ];
+
+  const html = tiles.map(t => `
+    <div class="kpi">
+      <div class="kpi-label">${t.label}</div>
+      <div class="kpi-value${t.small ? ' small' : ''}">${t.value}</div>
+      <div class="kpi-sub">${t.sub}</div>
+    </div>
+  `).join('');
+  document.getElementById('kpi-grid').innerHTML = html;
+}
+
+// Revenue Quality grid (Gross → Discount → Returns → Net stack)
+function renderRevenueQuality(viewKey) {
+  const v = VIEWS[viewKey];
+  const cur = DATA.periods[v.current];
+  const pri = DATA.periods[v.prior];
+
+  const gross = cur.gross_rev;
+  const grossPrior = pri.gross_rev;
+  const grossYoY = grossPrior ? (gross - grossPrior) / Math.abs(grossPrior) * 100 : 0;
+
+  const net = cur.net_rev;
+  const netPrior = pri.net_rev;
+  const netYoY = netPrior ? (net - netPrior) / Math.abs(netPrior) * 100 : 0;
+
+  const total = cur.rev;
+  const totalPrior = pri.rev;
+  const totalYoY = totalPrior ? (total - totalPrior) / Math.abs(totalPrior) * 100 : 0;
+
+  const discRate = gross ? Math.abs(cur.discounts) / gross * 100 : 0;
+  const discRatePrior = grossPrior ? Math.abs(pri.discounts) / grossPrior * 100 : 0;
+  const discPP = discRate - discRatePrior;
+
+  const retRate = gross ? Math.abs(cur.returns) / gross * 100 : 0;
+  const retRatePrior = grossPrior ? Math.abs(pri.returns) / grossPrior * 100 : 0;
+  const retPP = retRate - retRatePrior;
+
+  // Discount/Return increases are NEGATIVE (more leakage); decreases are POSITIVE
+  const tiles = [
+    {
+      label: 'Gross Revenue', value: fmtMoney(gross),
+      sub: `prior ${fmtMoney(grossPrior)} <span class="delta ${grossYoY >= 0 ? 'pos' : 'neg'}">${fmtPctSigned(grossYoY)}</span>`
+    },
+    {
+      label: 'Discount Rate', value: fmtPct(discRate),
+      sub: `prior ${fmtPct(discRatePrior)} <span class="delta ${discPP <= 0 ? 'pos' : 'neg'}">${fmtPP(discPP)}</span>`
+    },
+    {
+      label: 'Return Rate', value: fmtPct(retRate),
+      sub: `prior ${fmtPct(retRatePrior)} <span class="delta ${retPP <= 0 ? 'pos' : 'neg'}">${fmtPP(retPP)}</span>`
+    },
+    {
+      label: 'Net Revenue', value: fmtMoney(net),
+      sub: `prior ${fmtMoney(netPrior)} <span class="delta ${netYoY >= 0 ? 'pos' : 'neg'}">${fmtPctSigned(netYoY)}</span>`
+    },
+  ];
+
+  const html = tiles.map(t => `
+    <div class="kpi">
+      <div class="kpi-label">${t.label}</div>
+      <div class="kpi-value">${t.value}</div>
+      <div class="kpi-sub">${t.sub}</div>
+    </div>
+  `).join('');
+  document.getElementById('revq-grid').innerHTML = html;
+  document.getElementById('revq-note').textContent = v.note;
+}
+
+// Inventory KPI grid (data from Fulfil)
+function renderInventoryKPIs(viewKey) {
+  const v = VIEWS[viewKey];
+  const inv = DATA.fulfil_inventory;
+  const curKpis = inv.kpis_by_period[v.current];
+  const priKpis = inv.kpis_prior[v.prior];
+  const invValue = DATA.bs_periods[v.current].inv;
+
+  // Compute YoY deltas
+  const turnsDelta = curKpis.turns - priKpis.turns;
+  const dioDelta = curKpis.dio - priKpis.dio;
+  const unitsShippedYoY = priKpis.units_shipped ? (curKpis.units_shipped - priKpis.units_shipped) / Math.abs(priKpis.units_shipped) * 100 : 0;
+
+  // Color logic: turns up = good (green), DIO down = good (green)
+  const turnsCls = turnsDelta >= 0 ? 'pos' : 'neg';
+  const dioCls = dioDelta <= 0 ? 'pos' : 'neg';
+  const unitsCls = unitsShippedYoY >= 0 ? 'pos' : 'neg';
+
+  const tiles = [
+    {
+      label: 'Inventory Value', value: fmtMoney(invValue),
+      sub: `at period end · from financial model`
+    },
+    {
+      label: 'Units on Hand', value: inv.units_on_hand_current.toLocaleString(),
+      sub: `current snapshot · ${inv.active_skus_current} active SKUs`
+    },
+    {
+      label: 'Inventory Turns', value: curKpis.turns.toFixed(2) + 'x',
+      sub: `prior ${priKpis.turns.toFixed(2)}x <span class="delta ${turnsCls}">${turnsDelta >= 0 ? '+' : ''}${turnsDelta.toFixed(2)}x</span>`
+    },
+    {
+      label: 'Days Inventory', value: Math.round(curKpis.dio) + ' days',
+      sub: `prior ${Math.round(priKpis.dio)} days <span class="delta ${dioCls}">${dioDelta <= 0 ? '' : '+'}${Math.round(dioDelta)} days</span>`
+    },
+    {
+      label: 'Units Shipped', value: curKpis.units_shipped.toLocaleString(), small: true,
+      sub: `prior ${priKpis.units_shipped.toLocaleString()} <span class="delta ${unitsCls}">${fmtPctSigned(unitsShippedYoY)}</span>`
+    },
+    {
+      label: 'Warehouses', value: inv.warehouse_count.toString(), small: true,
+      sub: `7 third-party · 9 retail / other`
+    },
+  ];
+
+  // Show first 4 in 4-col grid + 2 small underneath
+  const html = tiles.map(t => `
+    <div class="kpi">
+      <div class="kpi-label">${t.label}</div>
+      <div class="kpi-value${t.small ? ' small' : ''}">${t.value}</div>
+      <div class="kpi-sub">${t.sub}</div>
+    </div>
+  `).join('');
+  document.getElementById('inv-kpi-grid').innerHTML = html;
+
+  // Build period-appropriate note for inventory section
+  let noteText;
+  if (viewKey === 'month') noteText = `${v.label} · turns annualized from monthly COGS · units from Fulfil`;
+  else if (viewKey === 'quarter') noteText = `${v.label} · turns annualized from quarterly COGS · units from Fulfil`;
+  else noteText = `${v.label} · turns annualized · units from Fulfil`;
+  document.getElementById('inv-note').textContent = noteText;
+}
+
+// Commentary builder
+function renderCommentary(viewKey) {
+  const v = VIEWS[viewKey];
+  const cur = DATA.periods[v.current];
+  const pri = DATA.periods[v.prior];
+  const bs = DATA.bs_periods[v.current];
+
+  const netRev = cur.net_rev;
+  const netRevPrior = pri.net_rev;
+  const netRevYoY = netRevPrior ? (netRev - netRevPrior) / Math.abs(netRevPrior) * 100 : 0;
+  const grossRev = cur.gross_rev;
+  const grossRevPrior = pri.gross_rev;
+  const grossRevYoY = grossRevPrior ? (grossRev - grossRevPrior) / Math.abs(grossRevPrior) * 100 : 0;
+  const ebitda = cur.ebitda;
+  const ebitdaPrior = pri.ebitda;
+  const ebitdaPctChange = ebitdaPrior ? (ebitda - ebitdaPrior) / Math.abs(ebitdaPrior) * 100 : 0;
+  const perfadPct = cur.rev ? cur.perfad / cur.rev * 100 : 0;
+  const netCash = bs.cash - bs.loc - (bs.edc || 0);
+
+  // Adaptive narrative based on actual numbers (uses net revenue)
+  let revPhrase;
+  if (Math.abs(netRevYoY) < 3) revPhrase = 'Net revenue held essentially flat year-over-year';
+  else if (netRevYoY > 0) revPhrase = `Net revenue grew ${fmtPctSigned(netRevYoY)} year-over-year`;
+  else revPhrase = `Net revenue declined ${netRevYoY.toFixed(1)}% year-over-year`;
+
+  // Call out gross/net divergence if material (>5pp gap)
+  const grossNetGap = grossRevYoY - netRevYoY;
+  let divergencePhrase = '';
+  if (Math.abs(grossNetGap) > 5) {
+    if (grossNetGap > 0) {
+      divergencePhrase = ` (gross revenue rose ${fmtPctSigned(grossRevYoY)} on heavier discounting)`;
+    } else {
+      divergencePhrase = ` (gross revenue ${grossRevYoY >= 0 ? 'rose' : 'fell'} ${fmtPctSigned(grossRevYoY)} on lighter discounting)`;
+    }
+  }
+
+  let ebitdaPhrase;
+  if (ebitda < 0 && ebitdaPrior < 0 && ebitda > ebitdaPrior) {
+    ebitdaPhrase = `<em>EBITDA losses narrowed by ${Math.abs(ebitdaPctChange).toFixed(0)}%</em>`;
+  } else if (ebitda >= 0 && ebitdaPrior < 0) {
+    ebitdaPhrase = `<em>EBITDA turned positive</em>`;
+  } else if (ebitda >= 0 && ebitdaPrior >= 0 && ebitda > ebitdaPrior) {
+    ebitdaPhrase = `<em>EBITDA expanded ${ebitdaPctChange.toFixed(0)}%</em>`;
+  } else {
+    ebitdaPhrase = `<em>EBITDA was ${fmtMoney(ebitda)}</em>`;
+  }
+
+  const text = `${revPhrase}${divergencePhrase} while ${ebitdaPhrase}, reflecting a deliberate pivot toward marketing efficiency and tighter operating discipline. Gross margin compressed modestly on channel mix and shipping costs, but contribution margin remained resilient.`;
+
+  document.getElementById('commentary-label').textContent = v.section;
+  document.getElementById('commentary-text').innerHTML = text;
+
+  const stats = [
+    { num: fmtMoney(netRev), lbl: `${v.label} Net Revenue` },
+    { num: fmtMoney(ebitda), lbl: `${v.label} EBITDA` },
+    { num: fmtPct(perfadPct), lbl: 'Perf Marketing / Rev' },
+    { num: fmtMoney(netCash), lbl: 'Net Cash Position' },
+  ];
+  document.getElementById('commentary-stats').innerHTML = stats.map(s => `
+    <div><div class="cs-num">${s.num}</div><div class="cs-lbl">${s.lbl}</div></div>
+  `).join('');
+}
+
+// Segment table and doughnut (uses NET REVENUE)
+function renderSegments(viewKey) {
+  const v = VIEWS[viewKey];
+  const curKey = v.current + '_net';
+  const priKey = v.prior + '_net';
+
+  const segMap = {};
+  DATA.channels.forEach(c => {
+    if (!segMap[c.segment]) segMap[c.segment] = { current: 0, prior: 0 };
+    segMap[c.segment].current += c[curKey];
+    segMap[c.segment].prior += c[priKey];
+  });
+
+  const totalCur = Object.values(segMap).reduce((a,b) => a + b.current, 0);
+  const totalPri = Object.values(segMap).reduce((a,b) => a + b.prior, 0);
+
+  const order = ['E-Commerce','Retail','Postcard','Wholesale','Corporate'];
+  let rowsHtml = '';
+  order.forEach(seg => {
+    if (!segMap[seg]) return;
+    const t = segMap[seg];
+    const yoy = t.prior ? (t.current - t.prior) / Math.abs(t.prior) * 100 : null;
+    const mix = totalCur ? t.current / totalCur * 100 : 0;
+    const yoyCls = (yoy === null) ? '' : (yoy >= 0 ? 'pos' : 'neg');
+    const yoyStr = (yoy === null || t.prior === 0) ? '—' : fmtPctSigned(yoy);
+    rowsHtml += `<tr>
+      <td class="seg-name">${seg}</td>
+      <td class="num">${fmtMoney(t.prior)}</td>
+      <td class="num">${fmtMoney(t.current)}</td>
+      <td class="num ${yoyCls}">${yoyStr}</td>
+      <td class="num">${mix.toFixed(1)}%</td>
+    </tr>`;
+  });
+  document.getElementById('seg-tbody').innerHTML = rowsHtml;
+
+  const totalYoy = totalPri ? (totalCur - totalPri) / Math.abs(totalPri) * 100 : 0;
+  document.getElementById('seg-tfoot').innerHTML = `<tr>
+    <td>Total</td>
+    <td class="num">${fmtMoney(totalPri)}</td>
+    <td class="num">${fmtMoney(totalCur)}</td>
+    <td class="num">${fmtPctSigned(totalYoy)}</td>
+    <td class="num">100.0%</td>
+  </tr>`;
+
+  document.getElementById('th-prior').textContent = v.priorLabel;
+  document.getElementById('th-current').textContent = v.label;
+}
+
+// Location detail table (NET REVENUE basis, sorted by channel then size)
+function renderChannelDetail(viewKey) {
+  const v = VIEWS[viewKey];
+  const curKey = v.current + '_net';
+  const priKey = v.prior + '_net';
+  const gmKey = v.current + '_gm';
+  const cmKey = v.current + '_cm';
+  const ebitdaKey = v.current + '_ebitda';
+
+  const totalCur = DATA.channels.reduce((a,c) => a + c[curKey], 0);
+
+  const channelOrder = ['E-Commerce', 'Retail', 'Postcard', 'Wholesale', 'Corporate'];
+
+  // Group locations by channel
+  const byChannel = {};
+  channelOrder.forEach(ch => byChannel[ch] = []);
+  DATA.channels.forEach(c => {
+    if (!byChannel[c.segment]) byChannel[c.segment] = [];
+    byChannel[c.segment].push(c);
+  });
+
+  let html = '';
+  channelOrder.forEach(ch => {
+    const locations = (byChannel[ch] || [])
+      .filter(c => !(c[curKey] === 0 && c[priKey] === 0))
+      .sort((a, b) => b[curKey] - a[curKey]);
+
+    if (locations.length === 0) return;
+
+    // Channel subtotals
+    const subCur = locations.reduce((a,c) => a + c[curKey], 0);
+    const subPri = locations.reduce((a,c) => a + c[priKey], 0);
+    const subGm = locations.reduce((a,c) => a + (c[gmKey] || 0), 0);
+    const subCm = locations.reduce((a,c) => a + (c[cmKey] || 0), 0);
+    const subEbitda = locations.reduce((a,c) => a + (c[ebitdaKey] || 0), 0);
+    const subYoy = subPri ? (subCur - subPri) / Math.abs(subPri) * 100 : null;
+    const subYoyStr = (subYoy === null || subPri === 0) ? '—' : fmtPctSigned(subYoy);
+    const subYoyCls = (subYoy === null) ? '' : (subYoy >= 0 ? 'pos' : 'neg');
+    const subMix = totalCur ? subCur / totalCur * 100 : 0;
+    const subGmPct = subCur ? subGm / subCur * 100 : 0;
+    const subCmPct = subCur ? subCm / subCur * 100 : 0;
+    const subEbitdaCls = subEbitda >= 0 ? 'pos' : 'neg';
+
+    // Channel header row with subtotals
+    html += `<tr class="channel-header-row">
+      <td class="channel-header-name">${ch}</td>
+      <td class="num">${fmtMoney(subCur)}</td>
+      <td class="num">${subMix.toFixed(1)}%</td>
+      <td class="num ${subYoyCls}">${subYoyStr}</td>
+      <td class="num">${subGmPct.toFixed(1)}%</td>
+      <td class="num">${subCmPct.toFixed(1)}%</td>
+      <td class="num ${subEbitdaCls}">${fmtMoney(subEbitda)}</td>
+    </tr>`;
+
+    // Location detail rows
+    locations.forEach(c => {
+      const yoy = c[priKey] ? (c[curKey] - c[priKey]) / Math.abs(c[priKey]) * 100 : null;
+      const yoyStr = (yoy === null || c[priKey] === 0) ? '—' : fmtPctSigned(yoy);
+      const yoyCls = (yoy === null) ? '' : (yoy >= 0 ? 'pos' : 'neg');
+      const mix = totalCur ? c[curKey] / totalCur * 100 : 0;
+      const gmPct = c[curKey] ? c[gmKey] / c[curKey] * 100 : 0;
+      const cmPct = c[curKey] ? c[cmKey] / c[curKey] * 100 : 0;
+      const ebitda = c[ebitdaKey] || 0;
+      const ebitdaCls = ebitda >= 0 ? 'pos' : 'neg';
+      html += `<tr class="location-row">
+        <td class="location-name">${c.name}</td>
+        <td class="num">${fmtMoney(c[curKey])}</td>
+        <td class="num">${mix.toFixed(1)}%</td>
+        <td class="num ${yoyCls}">${yoyStr}</td>
+        <td class="num">${gmPct.toFixed(1)}%</td>
+        <td class="num">${cmPct.toFixed(1)}%</td>
+        <td class="num ${ebitdaCls}">${fmtMoney(ebitda)}</td>
+      </tr>`;
+    });
+  });
+
+  document.getElementById('channel-tbody').innerHTML = html;
+  document.getElementById('th-ch-rev').textContent = `${v.label} Net Rev`;
+}
+
+// Channel mix doughnut (uses NET REVENUE, by channel)
+let segChart = null;
+function renderSegMixChart(viewKey) {
+  const v = VIEWS[viewKey];
+  const curKey = v.current + '_net';
+  const segMap = {};
+  DATA.channels.forEach(c => {
+    segMap[c.segment] = (segMap[c.segment] || 0) + c[curKey];
+  });
+  const labels = [], data = [];
+  ['E-Commerce','Retail','Postcard','Wholesale','Corporate'].forEach(s => {
+    if (segMap[s]) { labels.push(s); data.push(segMap[s]); }
+  });
+  const colors = [C.accent, C.accentWarm, '#7a8a8a', '#c4a888', '#5c6e6e'];
+
+  if (segChart) {
+    segChart.data.labels = labels;
+    segChart.data.datasets[0].data = data;
+    segChart.update();
+    return;
+  }
+
+  segChart = new Chart(document.getElementById('chartSegMix'), {
+    type: 'doughnut',
+    data: { labels, datasets: [{ data, backgroundColor: colors, borderColor: C.bg, borderWidth: 3, hoverOffset: 6 }] },
+    options: {
+      responsive: true, maintainAspectRatio: false, cutout: '62%',
+      plugins: {
+        legend: { position: 'right', labels: { boxWidth: 14, boxHeight: 14, padding: 14, font: { size: 12 } } },
+        tooltip: {
+          backgroundColor: '#1a1a1a', titleColor: '#f5f2ec', bodyColor: '#f5f2ec',
+          padding: 12, cornerRadius: 0, borderColor: C.accentWarm, borderWidth: 1, displayColors: false,
+          callbacks: {
+            label: (ctx) => {
+              const total = data.reduce((a,b) => a+b, 0);
+              const pct = (ctx.raw / total * 100).toFixed(1);
+              return ctx.label + ': ' + fmtMoney(ctx.raw) + ' (' + pct + '%)';
+            }
+          }
+        }
+      }
+    }
+  });
+}
+
+// Geography mix doughnut (uses NET REVENUE, by geography)
+let geoChart = null;
+function renderGeoMixChart(viewKey) {
+  const v = VIEWS[viewKey];
+  const curKey = v.current + '_net';
+  const geoMap = {};
+  DATA.channels.forEach(c => {
+    const g = c.geography || 'Other';
+    geoMap[g] = (geoMap[g] || 0) + c[curKey];
+  });
+  // Order geographies by size (largest first)
+  const sorted = Object.entries(geoMap)
+    .filter(([_, v]) => v > 0)
+    .sort((a,b) => b[1] - a[1]);
+  const labels = sorted.map(s => s[0]);
+  const data = sorted.map(s => s[1]);
+  // Use a different palette for geography to distinguish from channel pie
+  const colors = ['#1a3a3a', '#b8794a', '#7a8a8a', '#c4a888', '#5c6e6e', '#8a5a3a'];
+
+  if (geoChart) {
+    geoChart.data.labels = labels;
+    geoChart.data.datasets[0].data = data;
+    geoChart.update();
+    return;
+  }
+
+  geoChart = new Chart(document.getElementById('chartGeoMix'), {
+    type: 'doughnut',
+    data: { labels, datasets: [{ data, backgroundColor: colors, borderColor: C.bg, borderWidth: 3, hoverOffset: 6 }] },
+    options: {
+      responsive: true, maintainAspectRatio: false, cutout: '62%',
+      plugins: {
+        legend: { position: 'right', labels: { boxWidth: 14, boxHeight: 14, padding: 14, font: { size: 12 } } },
+        tooltip: {
+          backgroundColor: '#1a1a1a', titleColor: '#f5f2ec', bodyColor: '#f5f2ec',
+          padding: 12, cornerRadius: 0, borderColor: C.accentWarm, borderWidth: 1, displayColors: false,
+          callbacks: {
+            label: (ctx) => {
+              const total = data.reduce((a,b) => a+b, 0);
+              const pct = (ctx.raw / total * 100).toFixed(1);
+              return ctx.label + ': ' + fmtMoney(ctx.raw) + ' (' + pct + '%)';
+            }
+          }
+        }
+      }
+    }
+  });
+}
+
+// Static charts (don't change per period)
+Chart.defaults.font.family = "'Inter Tight', sans-serif";
+Chart.defaults.font.size = 11;
+Chart.defaults.color = C.inkSoft;
+Chart.defaults.borderColor = C.line;
+
+const tooltipStyle = {
+  backgroundColor: '#1a1a1a', titleColor: '#f5f2ec', bodyColor: '#f5f2ec',
+  padding: 12, cornerRadius: 0, borderColor: C.accentWarm, borderWidth: 1, displayColors: false,
+};
+
 new Chart(document.getElementById('chartRevenue'), {
   type: 'bar',
   data: {
     labels: DATA.labels,
     datasets: [{
-      label: 'Revenue',
-      data: DATA.pnl.rev,
+      data: DATA.monthly.net_rev,
       backgroundColor: DATA.labels.map((_, i) => i < 12 ? C.line : C.accent),
       borderColor: DATA.labels.map((_, i) => i < 12 ? C.inkMuted : C.accent),
       borderWidth: 1,
-      borderRadius: 0,
     }]
   },
   options: {
-    responsive: true,
-    maintainAspectRatio: false,
-    plugins: {
-      legend: { display: false },
-      tooltip: {
-        ...tooltipStyle,
-        callbacks: {
-          label: (ctx) => fmtUSD(ctx.raw)
-        }
-      }
-    },
+    responsive: true, maintainAspectRatio: false,
+    plugins: { legend: { display: false }, tooltip: { ...tooltipStyle, callbacks: { label: (ctx) => fmtMoney(ctx.raw) } } },
     scales: {
-      y: {
-        beginAtZero: true,
-        ticks: { callback: (v) => fmtUSD(v), font: {family: "'JetBrains Mono', monospace", size: 10} },
-        grid: { color: C.line, drawBorder: false }
-      },
-      x: {
-        ticks: { font: {size: 10}, maxRotation: 0, autoSkip: true },
-        grid: { display: false }
-      }
+      y: { beginAtZero: true, ticks: { callback: (v) => fmtMoney(v), font: { family: "'JetBrains Mono', monospace", size: 10 } }, grid: { color: C.line } },
+      x: { ticks: { font: { size: 10 }, maxRotation: 0, autoSkip: true }, grid: { display: false } }
     }
   }
 });
 
-// 2. EBITDA chart - area
 new Chart(document.getElementById('chartEbitda'), {
   type: 'line',
   data: {
     labels: DATA.labels,
     datasets: [{
-      label: 'EBITDA',
-      data: DATA.pnl.ebitda,
+      data: DATA.monthly.ebitda,
       borderColor: C.accentWarm,
       backgroundColor: 'rgba(184, 121, 74, 0.12)',
-      borderWidth: 2,
-      pointRadius: 3,
-      pointBackgroundColor: C.accentWarm,
-      pointBorderColor: '#fff',
-      pointBorderWidth: 1.5,
-      pointHoverRadius: 5,
-      fill: true,
-      tension: 0.35
+      borderWidth: 2, pointRadius: 3, pointBackgroundColor: C.accentWarm,
+      pointBorderColor: '#fff', pointBorderWidth: 1.5, fill: true, tension: 0.35
     }]
   },
   options: {
-    responsive: true,
-    maintainAspectRatio: false,
-    plugins: {
-      legend: { display: false },
-      tooltip: {
-        ...tooltipStyle,
-        callbacks: { label: (ctx) => fmtUSD(ctx.raw) }
-      }
-    },
+    responsive: true, maintainAspectRatio: false,
+    plugins: { legend: { display: false }, tooltip: { ...tooltipStyle, callbacks: { label: (ctx) => fmtMoney(ctx.raw) } } },
     scales: {
-      y: {
-        ticks: { callback: (v) => fmtUSD(v), font: {family: "'JetBrains Mono', monospace", size: 10} },
-        grid: { color: (ctx) => ctx.tick.value === 0 ? C.ink : C.line, lineWidth: (ctx) => ctx.tick.value === 0 ? 1 : 1 }
-      },
-      x: {
-        ticks: { font: {size: 10}, maxRotation: 0, autoSkip: true },
-        grid: { display: false }
-      }
+      y: { ticks: { callback: (v) => fmtMoney(v), font: { family: "'JetBrains Mono', monospace", size: 10 } }, grid: { color: (ctx) => ctx.tick.value === 0 ? C.ink : C.line } },
+      x: { ticks: { font: { size: 10 }, maxRotation: 0, autoSkip: true }, grid: { display: false } }
     }
   }
 });
 
-// 3. Margin profile - multi-line
 new Chart(document.getElementById('chartMargins'), {
   type: 'line',
   data: {
     labels: DATA.labels,
     datasets: [
-      {
-        label: 'Gross Margin %',
-        data: DATA.gm_pct,
-        borderColor: C.accent,
-        backgroundColor: 'transparent',
-        borderWidth: 2.5,
-        pointRadius: 2.5,
-        pointBackgroundColor: C.accent,
-        pointHoverRadius: 5,
-        tension: 0.3,
-      },
-      {
-        label: 'Contribution Margin %',
-        data: DATA.cm_pct,
-        borderColor: C.accentWarm,
-        backgroundColor: 'transparent',
-        borderWidth: 2.5,
-        pointRadius: 2.5,
-        pointBackgroundColor: C.accentWarm,
-        pointHoverRadius: 5,
-        tension: 0.3,
-      },
-      {
-        label: 'EBITDA %',
-        data: DATA.ebitda_pct,
-        borderColor: C.neg,
-        backgroundColor: 'transparent',
-        borderWidth: 2,
-        borderDash: [4, 4],
-        pointRadius: 2.5,
-        pointBackgroundColor: C.neg,
-        pointHoverRadius: 5,
-        tension: 0.3,
-      }
+      { label: 'Gross Margin %', data: DATA.gm_pct, borderColor: C.accent, backgroundColor: 'transparent', borderWidth: 2.5, pointRadius: 2.5, pointBackgroundColor: C.accent, tension: 0.3 },
+      { label: 'Contribution Margin %', data: DATA.cm_pct, borderColor: C.accentWarm, backgroundColor: 'transparent', borderWidth: 2.5, pointRadius: 2.5, pointBackgroundColor: C.accentWarm, tension: 0.3 },
+      { label: 'EBITDA %', data: DATA.ebitda_pct, borderColor: C.neg, backgroundColor: 'transparent', borderWidth: 2, borderDash: [4, 4], pointRadius: 2.5, pointBackgroundColor: C.neg, tension: 0.3 }
     ]
   },
   options: {
-    responsive: true,
-    maintainAspectRatio: false,
+    responsive: true, maintainAspectRatio: false,
     plugins: {
       legend: { position: 'top', align: 'end' },
-      tooltip: {
-        ...tooltipStyle,
-        callbacks: { label: (ctx) => ctx.dataset.label + ': ' + ctx.raw.toFixed(1) + '%' }
-      }
+      tooltip: { ...tooltipStyle, callbacks: { label: (ctx) => ctx.dataset.label + ': ' + ctx.raw.toFixed(1) + '%' } }
     },
     scales: {
-      y: {
-        ticks: { callback: (v) => v.toFixed(0) + '%', font: {family: "'JetBrains Mono', monospace", size: 10} },
-        grid: { color: (ctx) => ctx.tick.value === 0 ? C.ink : C.line }
-      },
-      x: {
-        ticks: { font: {size: 10}, maxRotation: 0, autoSkip: true },
-        grid: { display: false }
-      }
+      y: { ticks: { callback: (v) => v.toFixed(0) + '%', font: { family: "'JetBrains Mono', monospace", size: 10 } }, grid: { color: (ctx) => ctx.tick.value === 0 ? C.ink : C.line } },
+      x: { ticks: { font: { size: 10 }, maxRotation: 0, autoSkip: true }, grid: { display: false } }
     }
   }
 });
 
-// 4. Segment mix - doughnut
-const segLabels = [];
-const segData = [];
-const segColors = [C.accent, C.accentWarm, '#7a8a8a', '#c4a888'];
-const segMap = {};
-DATA.channels.forEach(c => {
-  if (!segMap[c.segment]) segMap[c.segment] = 0;
-  segMap[c.segment] += c.q1_26;
-});
-['E-Commerce','Retail','Wholesale','Corporate'].forEach((s, i) => {
-  if (segMap[s]) {
-    segLabels.push(s);
-    segData.push(segMap[s]);
-  }
-});
-
-new Chart(document.getElementById('chartSegMix'), {
-  type: 'doughnut',
-  data: {
-    labels: segLabels,
-    datasets: [{
-      data: segData,
-      backgroundColor: segColors,
-      borderColor: C.bg,
-      borderWidth: 3,
-      hoverOffset: 6,
-    }]
-  },
-  options: {
-    responsive: true,
-    maintainAspectRatio: false,
-    cutout: '62%',
-    plugins: {
-      legend: { position: 'right', labels: { boxWidth: 14, boxHeight: 14, padding: 14, font: { size: 12 } } },
-      tooltip: {
-        ...tooltipStyle,
-        callbacks: {
-          label: (ctx) => {
-            const total = segData.reduce((a,b) => a+b, 0);
-            const pct = (ctx.raw / total * 100).toFixed(1);
-            return ctx.label + ': ' + fmtUSD(ctx.raw) + ' (' + pct + '%)';
-          }
-        }
-      }
-    }
-  }
-});
-
-// 5. Cash & LOC chart - dual area
 new Chart(document.getElementById('chartCash'), {
   type: 'line',
   data: {
     labels: DATA.labels,
     datasets: [
-      {
-        label: 'Cash on Hand',
-        data: DATA.bs.cash,
-        borderColor: C.accent,
-        backgroundColor: 'rgba(26, 58, 58, 0.10)',
-        borderWidth: 2.5,
-        pointRadius: 2.5,
-        pointBackgroundColor: C.accent,
-        pointHoverRadius: 5,
-        fill: true,
-        tension: 0.3,
-      },
-      {
-        label: 'Line of Credit',
-        data: DATA.bs.loc,
-        borderColor: C.neg,
-        backgroundColor: 'transparent',
-        borderWidth: 2,
-        pointRadius: 2.5,
-        pointBackgroundColor: C.neg,
-        pointHoverRadius: 5,
-        tension: 0.3,
-      }
+      { label: 'Cash on Hand', data: DATA.monthly_bs.cash, borderColor: C.accent, backgroundColor: 'rgba(26, 58, 58, 0.10)', borderWidth: 2.5, pointRadius: 2.5, pointBackgroundColor: C.accent, fill: true, tension: 0.3 },
+      { label: 'RBC Line of Credit', data: DATA.monthly_bs.loc, borderColor: C.neg, backgroundColor: 'transparent', borderWidth: 2, pointRadius: 2.5, pointBackgroundColor: C.neg, tension: 0.3 },
+      { label: 'EDC Term Loan', data: DATA.monthly_bs.edc, borderColor: C.accentWarm, backgroundColor: 'transparent', borderWidth: 2, borderDash: [4, 4], pointRadius: 2.5, pointBackgroundColor: C.accentWarm, tension: 0.3 }
     ]
   },
   options: {
-    responsive: true,
-    maintainAspectRatio: false,
+    responsive: true, maintainAspectRatio: false,
     plugins: {
       legend: { position: 'top', align: 'end' },
-      tooltip: {
-        ...tooltipStyle,
-        callbacks: { label: (ctx) => ctx.dataset.label + ': ' + fmtUSD(ctx.raw) }
-      }
+      tooltip: { ...tooltipStyle, callbacks: { label: (ctx) => ctx.dataset.label + ': ' + fmtMoney(ctx.raw) } }
     },
     scales: {
-      y: {
-        beginAtZero: true,
-        ticks: { callback: (v) => fmtUSD(v), font: {family: "'JetBrains Mono', monospace", size: 10} },
-        grid: { color: C.line }
-      },
-      x: {
-        ticks: { font: {size: 10}, maxRotation: 0, autoSkip: true },
-        grid: { display: false }
-      }
+      y: { beginAtZero: true, ticks: { callback: (v) => fmtMoney(v), font: { family: "'JetBrains Mono', monospace", size: 10 } }, grid: { color: C.line } },
+      x: { ticks: { font: { size: 10 }, maxRotation: 0, autoSkip: true }, grid: { display: false } }
     }
   }
 });
 
-// 6. Inventory chart
+// Dual-axis: inventory value (left) + units shipped (right)
 new Chart(document.getElementById('chartInventory'), {
   type: 'line',
   data: {
     labels: DATA.labels,
-    datasets: [{
-      label: 'Inventory',
-      data: DATA.bs.inv,
-      borderColor: C.accentWarm,
-      backgroundColor: 'rgba(184, 121, 74, 0.12)',
-      borderWidth: 2.5,
-      pointRadius: 2.5,
-      pointBackgroundColor: C.accentWarm,
-      pointHoverRadius: 5,
-      fill: true,
-      tension: 0.3,
-    }]
+    datasets: [
+      {
+        label: 'Inventory Value',
+        data: DATA.monthly_bs.inv,
+        borderColor: C.accentWarm,
+        backgroundColor: 'rgba(184, 121, 74, 0.12)',
+        borderWidth: 2.5, pointRadius: 2.5, pointBackgroundColor: C.accentWarm,
+        fill: true, tension: 0.3,
+        yAxisID: 'y',
+      },
+      {
+        label: 'Units Shipped',
+        data: DATA.fulfil_inventory.units_shipped_monthly,
+        borderColor: C.accent,
+        backgroundColor: 'transparent',
+        borderWidth: 2, pointRadius: 2.5, pointBackgroundColor: C.accent,
+        borderDash: [4, 4],
+        tension: 0.3,
+        yAxisID: 'y1',
+      }
+    ]
   },
   options: {
-    responsive: true,
-    maintainAspectRatio: false,
+    responsive: true, maintainAspectRatio: false,
     plugins: {
-      legend: { display: false },
-      tooltip: {
-        ...tooltipStyle,
-        callbacks: { label: (ctx) => fmtUSD(ctx.raw) }
-      }
+      legend: { position: 'top', align: 'end' },
+      tooltip: { ...tooltipStyle, callbacks: { label: (ctx) => {
+        if (ctx.dataset.label === 'Inventory Value') return ctx.dataset.label + ': ' + fmtMoney(ctx.raw);
+        return ctx.dataset.label + ': ' + Math.round(ctx.raw).toLocaleString();
+      }}}
     },
     scales: {
       y: {
+        position: 'left',
         beginAtZero: false,
-        ticks: { callback: (v) => fmtUSD(v), font: {family: "'JetBrains Mono', monospace", size: 10} },
-        grid: { color: C.line }
+        ticks: { callback: (v) => fmtMoney(v), font: { family: "'JetBrains Mono', monospace", size: 10 }, color: C.accentWarm },
+        grid: { color: C.line },
+        title: { display: true, text: 'Inventory ($)', color: C.inkMuted, font: { size: 10 } }
       },
-      x: {
-        ticks: { font: {size: 10}, maxRotation: 0, autoSkip: true },
-        grid: { display: false }
-      }
+      y1: {
+        position: 'right',
+        beginAtZero: true,
+        ticks: { callback: (v) => (v/1000).toFixed(0) + 'K', font: { family: "'JetBrains Mono', monospace", size: 10 }, color: C.accent },
+        grid: { drawOnChartArea: false },
+        title: { display: true, text: 'Units', color: C.inkMuted, font: { size: 10 } }
+      },
+      x: { ticks: { font: { size: 10 }, maxRotation: 0, autoSkip: true }, grid: { display: false } }
     }
   }
 });
+
+// Warehouse distribution: horizontal bar chart, top warehouses by units
+const warehouseData = DATA.fulfil_inventory.warehouses.slice(0, 10);
+new Chart(document.getElementById('chartWarehouses'), {
+  type: 'bar',
+  data: {
+    labels: warehouseData.map(w => w.name.replace('Monos Retail - ', '').replace(', ON', '').replace(', BC', '').replace(', NY', '').replace(', CA', '').replace(', DC', '').replace(', IL', '').replace(', MA', '')),
+    datasets: [{
+      data: warehouseData.map(w => w.units),
+      backgroundColor: warehouseData.map((_, i) => i < 7 ? C.accent : C.accentWarm),
+      borderColor: warehouseData.map((_, i) => i < 7 ? C.accent : C.accentWarm),
+      borderWidth: 1,
+    }]
+  },
+  options: {
+    indexAxis: 'y',
+    responsive: true, maintainAspectRatio: false,
+    plugins: {
+      legend: { display: false },
+      tooltip: { ...tooltipStyle, callbacks: { label: (ctx) => ctx.raw.toLocaleString() + ' units' } }
+    },
+    scales: {
+      x: {
+        beginAtZero: true,
+        ticks: { callback: (v) => (v/1000).toFixed(0) + 'K', font: { family: "'JetBrains Mono', monospace", size: 10 } },
+        grid: { color: C.line }
+      },
+      y: { ticks: { font: { size: 10 } }, grid: { display: false } }
+    }
+  }
+});
+
+// Tab switching
+function setView(viewKey) {
+  const v = VIEWS[viewKey];
+  renderKPIs(viewKey);
+  renderRevenueQuality(viewKey);
+  renderCommentary(viewKey);
+  renderSegments(viewKey);
+  renderChannelDetail(viewKey);
+  renderSegMixChart(viewKey);
+  renderGeoMixChart(viewKey);
+  renderInventoryKPIs(viewKey);
+
+  document.getElementById('brand-sub').textContent = v.brandSub;
+  document.getElementById('tab-meta').textContent = `comparing ${v.label} vs ${v.priorLabel}`;
+  document.getElementById('kpi-note').textContent = v.note;
+  document.getElementById('channel-note').textContent = v.chMeta;
+  document.getElementById('seg-sub').textContent = v.segMix;
+  document.getElementById('geo-sub').textContent = v.segMix;
+
+  document.querySelectorAll('.tab').forEach(t => {
+    t.classList.toggle('active', t.dataset.period === viewKey);
+  });
+}
+
+document.querySelectorAll('.tab').forEach(t => {
+  t.addEventListener('click', () => setView(t.dataset.period));
+});
+
+// Initial render (month view)
+setView('month');
 </script>
 </body>
 </html>
